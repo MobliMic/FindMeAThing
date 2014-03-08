@@ -10,9 +10,9 @@ if (isset($viewSettings['pageName'])) {
 <head>
     <meta charset="utf-8">
     <title><?php echo $pageName; ?></title>
-    <meta name="description" content="A modern PHP framework core, designed from scratch to be a refreshing coding experience.">
+    <meta name="description" content="Location services for tourists in Bournemouth. Made for NHTG 2014">
     <meta name="keywords" content="HydraCore, hydra, core, php, development, framework, system core"/>
-    <meta name="author" content="Ryan Howell (https://theryanhowell.co.uk)">
+    <meta name="author" content="WeHasCode (https://github.com/orgs/WeHasCode/)">
 
     <link rel="shortcut icon" href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/favicon.ico" type="image/icon">
     <link rel="icon" href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/favicon.ico" type="image/icon">
@@ -42,7 +42,6 @@ if (isset($viewSettings['pageName'])) {
     <?php
     echo '<link rel="stylesheet" type="text/css" href="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/bootstrap/css/bootstrap.min.css">' . PHP_EOL;
     echo '<link rel="stylesheet" type="text/css" href="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/bootstrap/css/bootstrap-theme.min.css">' . PHP_EOL;
-    echo '<link rel="stylesheet" type="text/css" href="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/prism/prism.css">' . PHP_EOL;
 
     // If this page uses sass
     if (isset($viewSettings['sass'])) {
@@ -62,7 +61,6 @@ if (isset($viewSettings['pageName'])) {
 	echo '<script src="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/bootstrap/js/bootstrap.min.js"></script>' . PHP_EOL;
 	echo '<script src="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/modernizr/modernizr.custom.17895.js"></script>' . PHP_EOL;
     echo '<script src="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/webshims/polyfiller.js"></script>' . PHP_EOL;
-    echo '<script src="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/prism/prism.js"></script>' . PHP_EOL;
 	
     // If this page uses js
     if (isset($viewSettings['js'])) {
@@ -160,9 +158,7 @@ if (isset($viewSettings['pageName'])) {
         <nav class="navbar-collapse collapse">
             <ul class="nav navbar-nav" role="list">
                 <li role="listitem"><a href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>">Home</a></li>
-                <li role="listitem"><a href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/documentation">Documentation</a></li>
-                <li role="listitem"><a href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/contributors">Contributors</a></li>
-                <li role="listitem"><a href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/contributing">Contributing</a></li>
+                <li role="listitem"><a href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/about">About</a></li>
             </ul>
         </nav>
     </div>

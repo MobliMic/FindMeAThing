@@ -17,7 +17,10 @@
 	// Render Header
 	$thisPage->renderView('header');
 ?>
-	<h1>HydraCore</h1>
+
+
+
+
 <?php
 	// Render Footer
 	$thisPage->renderView('footer');
