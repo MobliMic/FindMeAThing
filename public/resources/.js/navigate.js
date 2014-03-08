@@ -30,8 +30,8 @@ function calcRoute(start, end) {
 
 $(document).ready(function(){
     window.urlVars = getUrlVars();
-    if(typeof(window.urlVars['lat']) != 'undefined'){
-        if(typeof(window.urlVars['long']) != 'undefined'){
+    if(typeof(window.urlVars['latitude']) != 'undefined'){
+        if(typeof(window.urlVars['longitude']) != 'undefined'){
             updateCoordinates(function(){
                 var r = JSON.parse(window.localStorage.getItem('coordinates'));
                 if(typeof(r) != 'undefined'){
