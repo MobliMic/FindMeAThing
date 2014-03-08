@@ -19,7 +19,6 @@ $thisPage->renderView('header');
 ?>
 
 
-
 <?php
 // Render Footer
 $thisPage->renderView('footer');
