@@ -25,25 +25,25 @@ $thisPage->renderView('header');
             <div class="col-md-3">
                 <span class="glyphicons glyphicons-fast_food"></span>
 
-                <h2>Things</h2>
+                <h2>Food</h2>
             </div>
 
             <div class="col-md-3">
-                <span class="glyphicons glyphicons-fast_food"></span>
+                <span class="glyphicons glyphicons-car"></span>
 
-                <h2>Things</h2>
+                <h2>Parking</h2>
             </div>
 
             <div class="col-md-3">
-                <span class="glyphicons glyphicons-fast_food"></span>
+                <span class="glyphicons glyphicons-stroller"></span>
 
-                <h2>Things</h2>
+                <h2>Family Areas</h2>
             </div>
 
             <div class="col-md-3">
-                <span class="glyphicons glyphicons-fast_food"></span>
+                <span class="glyphicons glyphicons-cardio"></span>
 
-                <h2>Things</h2>
+                <h2>Emergency Services</h2>
             </div>
 
         </div>
