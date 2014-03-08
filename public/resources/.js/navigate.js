@@ -34,7 +34,7 @@ $(document).ready(function(){
         if(typeof(window.urlVars['long']) != 'undefined'){
             updateCoordinates(function(r){
                 initializeNavigator();
-                calcRoute(String(r.coords.latitude) + ' ' + String(r.coords.latitude), String(window.urlVars['lat']) + ' ' + String(window.urlVars['long']));
+                calcRoute(String(r.coords.latitude) + ' ' + String(r.coords.longitude), String(window.urlVars['latitude']) + ' ' + String(window.urlVars['longitude']));
             }, function(){
                 alert('Failed to get coordinates');
             });
