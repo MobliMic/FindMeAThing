@@ -20,7 +20,10 @@ $thisPage->renderView('header');
 
     <div class="row">
         <div class="btn btn-block btn-default">
-            <span class="glyphicon french_press pull-left"></span> Restaurant Name
+            <span class="glyphicon french_press pull-left"></span>
+            Restaurant Name
+            <br>
+            Type - 500m
             <div>
                 <span class="pull-right glyphicon star"></span>
                 <span class="pull-right glyphicon star"></span>
@@ -30,7 +33,10 @@ $thisPage->renderView('header');
             </div>
         </div>
         <div class="btn btn-block btn-default">
-            <span class="glyphicon french_press pull-left"></span> Restaurant Name
+            <span class="glyphicon french_press pull-left"></span>
+            Restaurant Name
+            <br>
+            Type - 500m
             <div>
                 <span class="glyphicon star"></span>
                 <span class="glyphicon star"></span>
@@ -39,8 +45,6 @@ $thisPage->renderView('header');
                 <span class="glyphicon star-empty"></span>
             </div>
         </div>
-
-        <span class="glyphicon star-empty"></span>
 
     </div>
 
