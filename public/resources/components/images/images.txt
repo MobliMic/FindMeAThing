@@ -1,5 +1,0 @@
-Images should be organised by their usage, for example:
-
-icons
-logos
-content
