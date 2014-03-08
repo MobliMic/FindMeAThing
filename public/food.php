@@ -32,20 +32,48 @@ $thisPage->renderView('header');
                 <span class="pull-right glyphicon star-empty"></span>
             </div>
         </div>
+
         <div class="btn btn-block btn-default">
             <span class="glyphicon french_press pull-left"></span>
             Restaurant Name
             <br>
             Type - 500m
             <div>
-                <span class="glyphicon star"></span>
-                <span class="glyphicon star"></span>
-                <span class="glyphicon star-empty"></span>
-                <span class="glyphicon star-empty"></span>
-                <span class="glyphicon star-empty"></span>
+                <span class="pull-right glyphicon star"></span>
+                <span class="pull-right glyphicon star"></span>
+                <span class="pull-right glyphicon star-empty"></span>
+                <span class="pull-right glyphicon star-empty"></span>
+                <span class="pull-right glyphicon star-empty"></span>
             </div>
         </div>
 
+        <div class="btn btn-block btn-default">
+            <span class="glyphicon french_press pull-left"></span>
+            Restaurant Name
+            <br>
+            Type - 500m
+            <div>
+                <span class="pull-right glyphicon star"></span>
+                <span class="pull-right glyphicon star-empty"></span>
+                <span class="pull-right glyphicon star-empty"></span>
+                <span class="pull-right glyphicon star-empty"></span>
+                <span class="pull-right glyphicon star-empty"></span>
+            </div>
+        </div>
+
+        <div class="btn btn-block btn-default">
+            <span class="glyphicon french_press pull-left"></span>
+            Restaurant Name
+            <br>
+            Type - 500m
+            <div>
+                <span class="pull-right glyphicon star"></span>
+                <span class="pull-right glyphicon star"></span>
+                <span class="pull-right glyphicon star"></span>
+                <span class="pull-right glyphicon star-empty"></span>
+                <span class="pull-right glyphicon star-empty"></span>
+            </div>
+        </div>
     </div>
 
 <?php
