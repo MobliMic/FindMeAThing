@@ -19,7 +19,6 @@ $thisPage->renderView('header');
 ?>
 	<div class="row">
 		<div class="alert" style="display: none;" id="warning">
-			<button type="button" class="close" data-dismiss="alert">&times;</button>
 			<p><strong>Warning!</strong> <span id="warningText"></span></p>
 		</div>
 	</div>
