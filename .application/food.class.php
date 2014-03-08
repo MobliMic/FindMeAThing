@@ -36,7 +36,9 @@ class F_Food {
     private $available;
     private $open;
     private $close;
+    private $arraySize;
     private $types = array();
+    private $resArray = array();
 
     public function __construct(){
 
@@ -108,7 +110,7 @@ class F_Food {
         for($x = 0; $x < $this->arraySize; $x++)
         {
            // $resArray = $types[$x];
-           $resArray = array(
+            $this->resArray = array(
                $this->types[$x]=>array
                 (
                     "Name",
@@ -142,7 +144,23 @@ class F_Food {
                 break;
             }
         }
+
+        return  $this->resArray;
     }
 
-  
+    public function searchType($searchType)
+    {
+        $arraySize = sizeof($this->resArray);
+        $outArray = array();
+
+        for($x = 0;$x < $arraySize; $x++)
+        {
+            if(!preg_match($searchType,$this->resArray[$x]))
+            {
+                $this->resArray[$x] = $outArray[$x];
+            }
+        }
+
+        return $outArray;
+    }
 } 
