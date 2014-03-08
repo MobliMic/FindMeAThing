@@ -6,7 +6,7 @@ function initializeNavigator() {
 
     var mapOptions = {
         zoom: 7,
-        center: new google.maps.LatLng(41.850033, -87.6500523)
+        center: new google.maps.LatLng(window.urlVars['latitude'], window.urlVars['longitude'])
     };
     var map = new google.maps.Map($('#map-canvas')[0],
         mapOptions);
@@ -15,6 +15,7 @@ function initializeNavigator() {
 }
 
 function calcRoute(start, end) {
+    console.log(start, end);
     var request = {
         origin: start,
         destination: end,
@@ -37,7 +38,7 @@ $(document).ready(function(){
                 if(typeof(r) != 'undefined'){
                     if(typeof(r.coords) != 'undefined'){
                         initializeNavigator();
-                        calcRoute(String(r.coords.latitude) + ' ' + String(r.coords.longitude), String(window.urlVars['latitude']) + ' ' + String(window.urlVars['longitude']));
+                        calcRoute(String(r.coords.latitude) + ', ' + String(r.coords.longitude), String(window.urlVars['latitude']) + ', ' + String(window.urlVars['longitude']));
                     } else {
                         console.log(r);
                         alert('Failed to get coordinates');
