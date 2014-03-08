@@ -2,7 +2,7 @@ console.log('Main');
 
 function updateCoordinates(success, failure){
     var success_callback = function (r){
-        window.localStorage.setItem('coordinates', JSON.stringify(a.coords));
+        window.localStorage.setItem('coordinates', JSON.stringify(r));
         if(typeof(success) != 'undefined'){
             success.call(r);
         }
