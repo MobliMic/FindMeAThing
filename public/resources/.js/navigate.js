@@ -9,13 +9,13 @@ function initializeNavigator(latitude, longitude) {
         window.directionsService = new google.maps.DirectionsService();
     }
 
-    var map = new google.maps.Map($('#map-canvas')[0], {
+    window.map = new google.maps.Map($('#map-canvas')[0], {
         zoom: 7,
         center: new google.maps.LatLng(latitude, longitude)
     });
     directionsDisplay.setMap(map);
     directionsDisplay.setPanel($('#directions-panel')[0]);
-    var trafficLayer = new google.maps.TrafficLayer();
+    window.trafficLayer = new google.maps.TrafficLayer();
     trafficLayer.setMap(map);
 }
 
