@@ -18,7 +18,6 @@ $thisPage = new HC_Page($pageSettings);
 $thisPage->renderView('header');
 ?>
 
-    <div class="container">
 
         <div class="row">
 
@@ -47,7 +46,6 @@ $thisPage->renderView('header');
             </div>
 
         </div>
-    </div>
 
 
 <?php
