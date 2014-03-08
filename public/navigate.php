@@ -17,8 +17,16 @@ $thisPage = new HC_Page($pageSettings);
 // Render Header
 $thisPage->renderView('header');
 ?>
-	<div id="directions-panel" class="col-md-6"></div>
-	<div id="map-canvas" class="col-md-6"></div>
+	<div class="row">
+		<div class="col-md-6">
+			<div id="directions-panel"></div>
+		</div>
+		<div class="col-md-6">
+			<div id="map-canvas"></div>
+		</div>
+	</div>
+
+
 <?php
 // Render Footer
 $thisPage->renderView('footer');
