@@ -5,7 +5,7 @@ $pageSettings = [
         'header' => [
             'pageName' => 'Navigate',
             'sass' => ['main' => true],
-            'js' => ['main' => true]
+            'js' => ['main' => true, 'navigate' => true]
         ],
         'body' => true,
         'footer' => true
@@ -17,8 +17,8 @@ $thisPage = new HC_Page($pageSettings);
 // Render Header
 $thisPage->renderView('header');
 ?>
-
-
+	<div id="directions-panel"></div>
+	<div id="map-canvas"></div>
 <?php
 // Render Footer
 $thisPage->renderView('footer');
