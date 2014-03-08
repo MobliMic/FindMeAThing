@@ -1,12 +1,12 @@
 console.log('Navigate');
 
-function initializeNavigator() {
+function initializeNavigator(lat, long) {
     window.directionsDisplay = new google.maps.DirectionsRenderer();
     window.directionsService = new google.maps.DirectionsService();
 
     var mapOptions = {
         zoom: 7,
-        center: new google.maps.LatLng(window.urlVars['latitude'], window.urlVars['longitude'])
+        center: new google.maps.LatLng(lat, long)
     };
     var map = new google.maps.Map($('#map-canvas')[0],
         mapOptions);
@@ -37,7 +37,7 @@ $(document).ready(function(){
                 var r = JSON.parse(window.localStorage.getItem('coordinates'));
                 if(typeof(r) != 'undefined'){
                     if(typeof(r.coords) != 'undefined'){
-                        initializeNavigator();
+                        initializeNavigator(r.coords.latitude, r.coords.longitude);
                         calcRoute(String(r.coords.latitude) + ', ' + String(r.coords.longitude), String(window.urlVars['latitude']) + ', ' + String(window.urlVars['longitude']));
                     } else {
                         console.log(r);
