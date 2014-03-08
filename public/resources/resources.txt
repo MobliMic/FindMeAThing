@@ -1,0 +1,10 @@
+Resources are resources specific to your project, seperated by type.
+
+The standard naming convention is to use a . before the name of the language if that language has to be compiled.
+
+For example:
+.js -> js
+.dart -> dart
+.scss -> css (each file is automatically appended with .scss)
+.less -> css (each file is automatically appended with .less)
+images (is not compiled)

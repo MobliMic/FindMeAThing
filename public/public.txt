@@ -1,0 +1,10 @@
+The public directory is generically used to store all resources that should be accessed directly by the user.
+
+For example:
+components (external resources are directly called by the user)
+resources
+directory/pages
+pages
+
+
+Note that views are not inside the public directory as they should never be accessible to the user directly, only included.

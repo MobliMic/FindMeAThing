@@ -1,0 +1,1 @@
+The settings folder is used to store all application and system settings for your project.

@@ -1,0 +1,52 @@
+<!-- Here you define all the unit tests in order of dependency -->
+<phpunit>
+    <testsuites>
+        <testsuite name="CORE_ALL">
+            <!-- Here you define all the core unit tests in order of dependency -->
+            <!-- CORE -->
+            <file>.core/core.class.test.php</file>
+
+            <!-- CORE MODULES -->
+
+            <!-- CORE MODULES DATA -->
+            <file>.core/modules/data/site.class.test.php</file>
+            <file>.core/modules/data/apc.class.test.php</file>
+            <file>.core/modules/data/db.class.test.php</file>
+            <file>.core/modules/data/page.class.test.php</file>
+            <file>.core/modules/data/user.class.test.php</file>
+            <file>.core/modules/data/directory.class.test.php</file>
+            <file>.core/modules/data/email.class.test.php</file>
+            <file>.core/modules/data/encryption.class.test.php</file>
+            <file>.core/modules/data/error.class.test.php</file>
+            <file>.core/modules/data/file.class.test.php</file>
+            <file>.core/modules/data/url.class.test.php</file>
+            <file>.core/modules/data/zip.class.test.php</file>
+
+            <!-- CORE MODULES DATA DATE-TIME -->
+            <file>.core/modules/data/date-time/time.class.test.php</file>
+            <file>.core/modules/data/date-time/date.class.test.php</file>
+            <file>.core/modules/data/date-time/datetime.class.test.php</file>
+
+            <!-- CORE MODULES RENDER -->
+            <file>.core/modules/render/calendar.class.test.php</file>
+
+            <!-- CORE MODULES RENDER FORMS -->
+            <file>.core/modules/render/forms/button.class.test.php</file>
+            <file>.core/modules/render/forms/checkbox.class.test.php</file>
+            <file>.core/modules/render/forms/form.class.test.php</file>
+            <file>.core/modules/render/forms/input.class.test.php</file>
+            <file>.core/modules/render/forms/select.class.test.php</file>
+
+            <!-- CORE MODULES RENDER VIEWS -->
+            <file>.core/modules/render/views/list.class.test.php</file>
+            <file>.core/modules/render/views/table.class.test.php</file>
+
+            <!-- HOOKS -->
+            <file>.hooks/post-receive.test.php</file>
+        </testsuite>
+        <testsuite name="APPLICATION_ALL">
+            <!-- Here you define all the application tests in order of dependency -->
+            <!-- APPLICATION -->
+        </testsuite>
+    </testsuites>
+</phpunit>

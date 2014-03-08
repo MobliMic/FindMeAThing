@@ -1,0 +1,2 @@
+The sessions folder is where all PHP sessions get stored, this folder should be ignored in your version control system,
+and sym-linked to a nas for load balanced applications.
