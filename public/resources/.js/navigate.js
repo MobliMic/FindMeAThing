@@ -31,12 +31,17 @@ function calcRoute(start, end) {
     });
 }
 
+function recalc(){
+    calcRoute(String(window.coordinates.coords.latitude) + ', ' + String(window.coordinates.coords.longitude), String(window.urlVars['latitude']) + ', ' + String(window.urlVars['longitude']));
+}
+
 function init() {
+    window.coordinates = {"timestamp": 0, "coords": {"speed": null, "heading": null, "altitudeAccuracy": null, "accuracy": 140000, "altitude": null, "longitude": 0, "latitude": 0}};
     window.urlVars = getUrlVars();
     if (typeof (window.urlVars['latitude']) != 'undefined') {
         if (typeof (window.urlVars['longitude']) != 'undefined') {
             updateCoordinates(function () {
-                var r = JSON.parse(window.localStorage.getItem('coordinates'));
+                var r = window.coordinates = JSON.parse(window.localStorage.getItem('coordinates'));
                 if (typeof (r) != 'undefined') {
                     if (typeof (r.coords) != 'undefined') {
                         initializeNavigator(r.coords.latitude, r.coords.longitude);

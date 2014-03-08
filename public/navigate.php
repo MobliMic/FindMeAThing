@@ -18,7 +18,7 @@ $thisPage = new HC_Page($pageSettings);
 $thisPage->renderView('header');
 ?>
 	<div class="row">
-		<select id="mode" onchange="init();">
+		<select id="mode" onchange="recalc();">
 			<option value="DRIVING" selected>Driving</option>
 			<option value="WALKING">Walking</option>
 			<option value="BICYCLING">Bicycling</option>
