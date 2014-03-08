@@ -15,18 +15,62 @@ function initializeNavigator(latitude, longitude) {
     });
     directionsDisplay.setMap(map);
     directionsDisplay.setPanel($('#directions-panel')[0]);
+    var trafficLayer = new google.maps.TrafficLayer();
+    trafficLayer.setMap(map);
+}
+
+function showSteps(directionResult) {
+    // For each step, place a marker, and add the text to the marker's
+    // info window. Also attach the marker to an array so we
+    // can keep track of it and remove it when calculating new
+    // routes.
+    var myRoute = directionResult.routes[0].legs[0];
+
+    for (var i = 0; i < myRoute.steps.length; i++) {
+        var marker = new google.maps.Marker({
+            position: myRoute.steps[i].start_location,
+            map: map
+        });
+        attachInstructionText(marker, myRoute.steps[i].instructions);
+        markerArray[i] = marker;
+    }
+}
+
+function attachInstructionText(marker, text) {
+    google.maps.event.addListener(marker, 'click', function() {
+        // Open an info window when the marker is clicked on,
+        // containing the text of the step.
+        stepDisplay.setContent(text);
+        stepDisplay.open(map, marker);
+    });
 }
 
 function calcRoute(start, end) {
     console.log(start, end);
+
+    // First, remove any existing markers from the map.
+    for (var i = 0; i < markerArray.length; i++) {
+        markerArray[i].setMap(null);
+    }
+
+    // Now, clear the array itself.
+    markerArray = [];
+
     var request = {
         origin: start,
         destination: end,
         travelMode: google.maps.TravelMode[$('#mode').val()]
     };
-    directionsService.route(request, function (response, status) {
+
+    directionsService.route(request, function(response, status) {
         if (status == google.maps.DirectionsStatus.OK) {
+            if(typeof(response.routes[0].warnings) != 'undefined'){
+                $('#warningText').text(response.routes[0].warnings);
+                $('#warning').slideDown();
+            }
+
             directionsDisplay.setDirections(response);
+            showSteps(response);
         }
     });
 }
@@ -36,6 +80,7 @@ function reCalcMap(){
 }
 
 function initNav() {
+    window.markerArray = [];
     window.coordinates = {"timestamp": 0, "coords": {"speed": null, "heading": null, "altitudeAccuracy": null, "accuracy": 140000, "altitude": null, "longitude": 0, "latitude": 0}};
     window.urlVars = getUrlVars();
     if (typeof (window.urlVars['latitude']) != 'undefined') {

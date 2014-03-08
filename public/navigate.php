@@ -18,6 +18,12 @@ $thisPage = new HC_Page($pageSettings);
 $thisPage->renderView('header');
 ?>
 	<div class="row">
+		<div class="alert" style="display: none;" id="warning">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<p><strong>Warning!</strong> <span id="warningText"></span></p>
+		</div>
+	</div>
+	<div class="row">
 		<select id="mode" onchange="reCalcMap();" class="form-control">
 			<option value="DRIVING" selected>Driving</option>
 			<option value="WALKING">Walking</option>
