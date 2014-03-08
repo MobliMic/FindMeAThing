@@ -66,10 +66,14 @@ function calcRoute(start, end) {
         if (status == google.maps.DirectionsStatus.OK) {
             if(response.routes[0].warnings != ''){
                 $('#warning').slideUp(400, function(){
-                    $('#warningText').text(response.routes[0].warnings);
+                    $('#warningText').html(response.routes[0].warnings);
                     $('#warning').slideDown();
                 });
                 response.routes[0].warnings = '';
+            } else {
+                if($('#warning').css('display') == 'block'){
+                    $('#warning').slideUp();
+                }
             }
             directionsDisplay.setDirections(response);
             showSteps(response);
