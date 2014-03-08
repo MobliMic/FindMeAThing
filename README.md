@@ -1,4 +1,10 @@
-HackBmthMarch2014
+Find Me A Thing
 =================
 
-Repo for whatever we decide to do at hackbmth this weekend
+[![Build Status](https://travis-ci.org/MobliMic/HackBmthMarch2014.png)](https://travis-ci.org/MobliMic/HackBmthMarch2014)
+
+Navigation app for use in bournemouth and make use of the wifi on the sea front
+
+#Todo
+
+* Things

@@ -1,0 +1,30 @@
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Mac
+.DS_Store
+
+# Compiled Resources
+*.closure.js
+*.scss.css
+*.less.css
+*.dart.js
+# SASS Cache
+*.scssc
+
+# Sessions
+.sessions/sess_*
+
+# IDE Specific
+dwsync.xml
+.idea/*
+
+# Misc
+composer.phar
+composer.lock
+*.uml
+vendor/*
+gource.ppm
+gource.x264.mp4

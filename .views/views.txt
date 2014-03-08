@@ -1,0 +1,1 @@
+The views folder is for storing all predefined views, each file can contain static html or use variables to generate different output per view.
