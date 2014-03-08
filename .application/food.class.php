@@ -8,6 +8,36 @@
 
 class F_Food {
 
+    private $id;
+    private $fhrsid;
+    private $LocAuthBusID;
+    private $businessName;
+    private $businessType;
+    private $businessTypeID;
+    private $addressLine1;
+    private $addressLine2;
+    private $addressLine3;
+    private $addressLine4;
+    private $postCode;
+    private $ratingValue;
+    private $ratingKey;
+    private $ratingDate;
+    private $locAuthCode;
+    private $locAuthName;
+    private $locAuthWeb;
+    private $LocAuthEmaAdd;
+    private $hyg;
+    private $struct;
+    private $confInMan;
+    private $schemeType;
+    private $long;
+    private $lat;
+    private $loc;
+    private $available;
+    private $open;
+    private $close;
+    private $types = array();
+
     public function __construct(){
 
         $db = new HC_DB();
@@ -15,69 +45,71 @@ class F_Food {
         $rst = mysql_fetch_array( $db->query("SELECT * FROM food"));
         $typeRst = mysql_fetch_array($db->query("SELECT BusinessType, BusinessTypeID FROM food"));
 
-        $types = array();
+        $this->types = array();
 
-        $id = $rst["id"];
-        $fhrsid = $rst["FHRSID"];
-        $LocAuthBusID = $rst["LocalAuthorityBusinessID"];
-        $businessName = $rst["BusinessName"];
-        $businessType = $rst["BusinessType"];
-        $businessTypeID = $rst["BusinessTypeID"];
-        $addressLine1 = $rst["AddressLine1"];
-        $addressLine2 = $rst["AddressLine2"];
-        $addressLine3 = $rst["AddressLine3"];
-        $addressLine4 = $rst["AddressLine4"];
-        $postCode = $rst["PostCode"];
-        $ratingValue = $rst["RatingValue"];
-        $ratingKey = $rst["RatingKey"];
-        $ratingDate = $rst["RatingDate"];
-        $locAuthCode = $rst["LocalAuthorityCode"];
-        $locAuthName = $rst["LocalAuthorityName"];
-        $locAuthWeb = $rst["LocalAuthorityWebsite"];
-        $LocAuthEmaAdd = $rst["LocalAuthorityEmailAddress"];
-        $hyg = $rst["Hygiene"];
-        $struct = $rst["Structural"];
-        $confInMan = $rst["ConfidenceInManagement"];
-        $schemeType = $rst["SchemeType"];
-        $long = $rst["Longitude"];
-        $lat = $rst["Latitude"];
-        $loc = array($long,$lat);
-        $available =$rst["available"];
-        $open = $rst["open"];
-        $close = $rst["close"];
 
-        typeID($businessType,$businessTypeID,$types);
+        $this->id = $rst["id"];
+        $this->fhrsid = $rst["FHRSID"];
+        $this->LocAuthBusID = $rst["LocalAuthorityBusinessID"];
+        $this->businessName = $rst["BusinessName"];
+        $this->businessType = $rst["BusinessType"];
+        $this->businessTypeID = $rst["BusinessTypeID"];
+        $this->addressLine1 = $rst["AddressLine1"];
+        $this->addressLine2 = $rst["AddressLine2"];
+        $this->addressLine3 = $rst["AddressLine3"];
+        $this->addressLine4 = $rst["AddressLine4"];
+        $this->postCode = $rst["PostCode"];
+        $this->ratingValue = $rst["RatingValue"];
+        $this->ratingKey = $rst["RatingKey"];
+        $this->ratingDate = $rst["RatingDate"];
+        $this->locAuthCode = $rst["LocalAuthorityCode"];
+        $this->locAuthName = $rst["LocalAuthorityName"];
+        $this->locAuthWeb = $rst["LocalAuthorityWebsite"];
+        $this->LocAuthEmaAdd = $rst["LocalAuthorityEmailAddress"];
+        $this->hyg = $rst["Hygiene"];
+        $this->struct = $rst["Structural"];
+        $this->confInMan = $rst["ConfidenceInManagement"];
+        $this->schemeType = $rst["SchemeType"];
+        $this->long = $rst["Longitude"];
+        $this->lat = $rst["Latitude"];
+        $this->loc = array($this->long,$this->lat);
+        $this->available =$rst["available"];
+        $this->open = $rst["open"];
+        $this->close = $rst["close"];
+
+        typeID();
     }
 
-    public function typeId($businessType,$businessTypeID, $types)
+    public function typeId()
     {
-        $arraySize = sizeof($businessTypeID);
+        $this->arraySize = sizeof($this->businessTypeID);
 
 
 
-        for($x = 0; $x < $arraySize; $x++)
+        for($x = 0; $x <  $this->arraySize; $x++)
         {
-            if(!in_array($businessType,$types))
+            if(!in_array( $this->businessType, $this->types))
             {
-                if($businessTypeID[x] == $businessType[x])
+                if( $this->businessTypeID[x] ==  $this->businessType[x])
                 {
-                    $types[$businessType][$businessTypeID];
+                    $this->types[$this->businessType][$this->businessTypeID];
                 }
             }
 
         }
 
-        return $types;
+        return $this->types;
     }
 
-    public function findBusiness($types,$businessType,$businessTypeID,$busiName,$id,$loc,$open,$close,$available,$hyg,$ratingValue)
+    public function findBusiness()
     {
-        $arraySize = sizeof($businessTypeID);
-        for($x = 0; $x < $arraySize; $x++)
+        $this->arraySize = sizeof($this->businessTypeID);
+        $y = 0;
+        for($x = 0; $x < $this->arraySize; $x++)
         {
            // $resArray = $types[$x];
            $resArray = array(
-                $types[$x]=>array
+               $this->types[$x]=>array
                 (
                     "Name",
                     "ID",
@@ -96,17 +128,17 @@ class F_Food {
 
             );
 
-            switch($types[$x]) {
+            switch($this->types[$y][$x]) {
                 case $x:
-                    $resArray[$types[$x]]["Name"][$busiName[x]];
-                    $resArray[$types[$x]]["ID"][$id[x]];
+                    $this->resArray[$this->types[$x]]["Name"][$this->busiName[x]];
+                    $this->resArray[$this->types[$x]]["ID"][$this->id[x]];
                     //$resCafCan["resCafCan"]["Name"][$loc[x,x]];
-                    $resArray[$types[$x]]["Type"][$businessType[x]];
-                    $resArray[$types[$x]]["Open"][$open[x]];
-                    $resArray[$types[$x]]["Close"][$close[x]];
-                    $resArray[$types[$x]]["Available"][$available[x]];
-                    $resArray[$types[$x]]["Hygiene"][$hyg[x]];
-                    $resArray[$types[$x]]["Rating"][$ratingValue[x]];
+                    $this->resArray[$this->types[$x]]["Type"][$this->businessType[x]];
+                    $this->resArray[$this->types[$x]]["Open"][$this->open[x]];
+                    $this->resArray[$this->types[$x]]["Close"][$this->close[x]];
+                    $this->resArray[$this->types[$x]]["Available"][$this->available[x]];
+                    $this->resArray[$this->types[$x]]["Hygiene"][$this->hyg[x]];
+                    $this->resArray[$this->types[$x]]["Rating"][$this->ratingValue[x]];
                 break;
             }
         }
