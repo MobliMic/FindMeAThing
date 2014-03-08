@@ -4,7 +4,7 @@ $pageSettings = [
     'views' => [
         'header' => [
             'pageName' => 'Navigate',
-            'sass' => ['main' => true],
+            'sass' => ['main' => true, 'navigate' => true],
             'js' => ['main' => true, 'navigate' => true]
         ],
         'body' => true,

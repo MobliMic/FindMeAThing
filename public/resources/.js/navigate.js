@@ -32,7 +32,8 @@ $(document).ready(function(){
     window.urlVars = getUrlVars();
     if(typeof(window.urlVars['lat']) != 'undefined'){
         if(typeof(window.urlVars['long']) != 'undefined'){
-            updateCoordinates(function(r){
+            updateCoordinates(function(){
+                var r = JSON.parse(window.localStorage.getItem('coordinates'));
                 if(typeof(r) != 'undefined'){
                     if(typeof(r.coords) != 'undefined'){
                         initializeNavigator();
