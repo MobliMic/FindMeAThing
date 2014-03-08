@@ -19,33 +19,36 @@ $thisPage->renderView('header');
 ?>
 
 
-        <div class="row">
+    <div class="row">
 
-            <div class="col-md-3 btn-lg">
+        <div class="col-md-3 btn btn-success btn-lg btn-block">
 
-                <h2><span class="glyphicons fast_food"></span>
-                    Food</h2>
-            </div>
-
-            <div class="col-md-3 btn-lg">
-
-                <h2><span class="glyphicons car"></span>
-                    Parking</h2>
-            </div>
-
-            <div class="col-md-3 btn-lg">
-
-                <h2><span class="glyphicons stroller"></span>
-                    Family Areas</h2>
-            </div>
-
-            <div class="col-md-3 btn-lg">
-
-                <h2><span class="glyphicons cardio"></span>
-                    Emergency Services</h2>
-            </div>
-
+            <h2><span class="glyphicons fast_food"></span>
+                Food</h2>
         </div>
+
+        <div class="col-md-3 btn btn-success btn-lg btn-block">
+
+
+            <h2><span class="glyphicons car"></span>
+                Parking</h2>
+        </div>
+
+        <div class="col-md-3 btn btn-success btn-lg btn-block">
+
+
+            <h2><span class="glyphicons stroller"></span>
+                Family Areas</h2>
+        </div>
+        
+        <div class="col-md-3 btn btn-success btn-lg btn-block">
+
+
+            <h2><span class="glyphicons cardio"></span>
+                Emergency Services</h2>
+        </div>
+
+    </div>
 
 
 <?php
