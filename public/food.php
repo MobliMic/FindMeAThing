@@ -20,16 +20,16 @@ $thisPage->renderView('header');
 
     <div class="row">
         <a href="food/summary.php" class="btn btn-block btn-default">
-            <span class="glyphicon french_press pull-left"></span>
+            <span class="glyphicons french_press pull-left"></span>
             Restaurant Name
             <br>
             Type - 500m
             <div>
-                <span class="pull-right glyphicon star"></span>
-                <span class="pull-right glyphicon star"></span>
-                <span class="pull-right glyphicon star"></span>
-                <span class="pull-right glyphicon star"></span>
-                <span class="pull-right glyphicon star-empty"></span>
+                <span class="pull-right glyphicons star"></span>
+                <span class="pull-right glyphicons star"></span>
+                <span class="pull-right glyphicons star"></span>
+                <span class="pull-right glyphicons star"></span>
+                <span class="pull-right glyphicons star-empty"></span>
             </div>
         </a>
 
@@ -39,11 +39,11 @@ $thisPage->renderView('header');
             <br>
             Type - 500m
             <div>
-                <span class="pull-right glyphicon star"></span>
-                <span class="pull-right glyphicon star"></span>
-                <span class="pull-right glyphicon star-empty"></span>
-                <span class="pull-right glyphicon star-empty"></span>
-                <span class="pull-right glyphicon star-empty"></span>
+                <span class="pull-right glyphicons star"></span>
+                <span class="pull-right glyphicons star"></span>
+                <span class="pull-right glyphicons star-empty"></span>
+                <span class="pull-right glyphicons star-empty"></span>
+                <span class="pull-right glyphicons star-empty"></span>
             </div>
         </div>
 
@@ -53,11 +53,11 @@ $thisPage->renderView('header');
             <br>
             Type - 500m
             <div>
-                <span class="pull-right glyphicon star"></span>
-                <span class="pull-right glyphicon star-empty"></span>
-                <span class="pull-right glyphicon star-empty"></span>
-                <span class="pull-right glyphicon star-empty"></span>
-                <span class="pull-right glyphicon star-empty"></span>
+                <span class="pull-right glyphicons star"></span>
+                <span class="pull-right glyphicons star-empty"></span>
+                <span class="pull-right glyphicons star-empty"></span>
+                <span class="pull-right glyphicons star-empty"></span>
+                <span class="pull-right glyphicons star-empty"></span>
             </div>
         </div>
 
@@ -67,11 +67,11 @@ $thisPage->renderView('header');
             <br>
             Type - 500m
             <div>
-                <span class="pull-right glyphicon star"></span>
-                <span class="pull-right glyphicon star"></span>
-                <span class="pull-right glyphicon star"></span>
-                <span class="pull-right glyphicon star-empty"></span>
-                <span class="pull-right glyphicon star-empty"></span>
+                <span class="pull-right glyphicons star"></span>
+                <span class="pull-right glyphicons star"></span>
+                <span class="pull-right glyphicons star"></span>
+                <span class="pull-right glyphicons star-empty"></span>
+                <span class="pull-right glyphicons star-empty"></span>
             </div>
         </div>
     </div>
