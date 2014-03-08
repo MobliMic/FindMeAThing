@@ -175,7 +175,7 @@ if (isset($viewSettings['pageName'])) {
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#" title="HydraCore"><h1>FMAT</h1></a>
+            <a class="navbar-brand" href="#" title="HydraCore">FMAT</a>
         </div>
         <nav class="navbar-collapse collapse">
             <ul class="nav navbar-nav" role="list">
@@ -188,6 +188,6 @@ if (isset($viewSettings['pageName'])) {
 <div class="clear"></div>
 <section id="page">
 <div class="row">
-    <span class="col-md-12"><h1><?php echo $pageName; ?></h1></span>
+    <span class="col-md-12"><h1><?php echo $viewSettings['pageName']; ?></h1></span>
 </div>
 <div class="container">
