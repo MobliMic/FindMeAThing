@@ -35,6 +35,10 @@
 				define('HC_VERSION', '0.0.6');
 			}
 
+            if (!defined('HC_APP_CORE_LOCATION')){
+                define('HC_APP_CORE_LOCATION', str_replace('.core','.application', HC_CORE_LOCATION));
+            }
+
 			// Include APC
 			require_once(HC_CORE_LOCATION . '/modules/data/apc.class.php');
 
@@ -66,7 +70,6 @@
 				require_once(HC_CORE_LOCATION . '/modules/data/site.class.php');
 				$this->site = new HC_Site($settings);
 
-                define('HC_APP_CORE_LOCATION', str_replace('.core','.application', HC_CORE_LOCATION));
                 require_once(HC_APP_CORE_LOCATION . '/core.class.php');
 				return true;
 			}
