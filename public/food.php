@@ -19,7 +19,7 @@ $thisPage->renderView('header');
 ?>
 
     <div class="row">
-        <a href="food_includes/summary.php" class="btn btn-block btn-default">
+        <a href="food/summary.php" class="btn btn-block btn-default">
             <span class="glyphicon french_press pull-left"></span>
             Restaurant Name
             <br>

@@ -1,5 +1,5 @@
 <?php
-require_once('../.core/core.class.php');
+require_once('../../.core/core.class.php');
 $pageSettings = [
     'views' => [
         'header' => [
