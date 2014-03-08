@@ -1,6 +1,6 @@
 <?php
 
-class HC_Core_Test extends PHPUnit_Framework_TestCase {
+class HC_F_Food_Class_Test extends PHPUnit_Framework_TestCase {
 
     // @todo: HC_Core_Test Test
 
