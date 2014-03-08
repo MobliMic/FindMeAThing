@@ -13,7 +13,7 @@
 	 */
 
 	$settings['constants'] = [
-		'SITE_DOMAIN' => 'prototype.theryanhowell.co.uk',
+		'SITE_DOMAIN' => 'fmat.theryanhowell.co.uk',
 		'SITE_NAME'   => 'Find Me A Thing',
 		'ENVIRONMENT' => 'DEV',
 		'PROTOCOL'    => 'https',
@@ -26,10 +26,10 @@
 
 	$settings['database'] = [
 		'engine'       => 'mysql',
-		'host'         => '',
-		'username'     => '',
-		'password'     => '',
-		'databasename' => ''
+		'host'         => 'localhost',
+		'username'     => 'root',
+		'password'     => 'root',
+		'databasename' => 'live'
 	];
 
 	/**

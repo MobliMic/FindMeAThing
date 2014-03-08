@@ -20,20 +20,32 @@ if (isset($viewSettings['pageName'])) {
     <!-- MS -->
     <meta name="application-name" content="HydraCore"/>
     <meta name="msapplication-TileColor" content="#3297b3"/>
-    <meta name="msapplication-square70x70logo" content="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/tiny.png"/>
-    <meta name="msapplication-square150x150logo" content="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/square.png"/>
-    <meta name="msapplication-wide310x150logo" content="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/wide.png"/>
-    <meta name="msapplication-square310x310logo" content="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/large.png"/>
+    <meta name="msapplication-square70x70logo"
+          content="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/tiny.png"/>
+    <meta name="msapplication-square150x150logo"
+          content="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/square.png"/>
+    <meta name="msapplication-wide310x150logo"
+          content="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/wide.png"/>
+    <meta name="msapplication-square310x310logo"
+          content="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/large.png"/>
 
     <!-- Apple -->
-    <link rel="apple-touch-icon" href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/apple-touch-icon.png" />
-    <link rel="apple-touch-icon" sizes="57x57" href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon"
+          href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="57x57"
+          href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="72x72"
+          href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76"
+          href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/apple-touch-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114"
+          href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/apple-touch-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120"
+          href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/apple-touch-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144"
+          href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152"
+          href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/apple-touch-icon-152x152.png"/>
 
     <meta name="revisit-after" content="15 days">
     <meta name="rating" content="Safe For Kids">
@@ -60,10 +72,11 @@ if (isset($viewSettings['pageName'])) {
         }
     }
     echo '<script src="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/jquery/jquery-1.11.0.min.js"></script>' . PHP_EOL;
-	echo '<script src="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/bootstrap/js/bootstrap.min.js"></script>' . PHP_EOL;
-	echo '<script src="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/modernizr/modernizr.custom.17895.js"></script>' . PHP_EOL;
+    echo '<script src="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/bootstrap/js/bootstrap.min.js"></script>' . PHP_EOL;
+    echo '<script src="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/modernizr/modernizr.custom.17895.js"></script>' . PHP_EOL;
     echo '<script src="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/webshims/polyfiller.js"></script>' . PHP_EOL;
-	
+    echo '<script src="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/geo/geo-min.js"></script>' . PHP_EOL;
+
     // If this page uses js
     if (isset($viewSettings['js'])) {
         // Link the resoucres
@@ -87,19 +100,27 @@ if (isset($viewSettings['pageName'])) {
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>">
     <meta name="twitter:title" content="<?php echo $pageName; ?>">
-    <meta name="twitter:description" content="A modern PHP framework core, designed from scratch to be a refreshing coding experience.">
+    <meta name="twitter:description"
+          content="A modern PHP framework core, designed from scratch to be a refreshing coding experience.">
     <meta name="twitter:image" content="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/favicon.png">
     <meta name="twitter:site" content="@HydraCoreIO">
     <link rel="publisher" href="https://plus.google.com/101420792682409929479">
     <!--[if lt IE 9]>
-        <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="https://raw2.github.com/scottjehl/Respond/master/src/respond.js"></script>
+    <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://raw2.github.com/scottjehl/Respond/master/src/respond.js"></script>
     <![endif]-->
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-47069574-1', 'hydracore.io');
         ga('send', 'pageview');
@@ -155,7 +176,7 @@ if (isset($viewSettings['pageName'])) {
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#" title="HydraCore"><img src="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/resources/images/logo/HydraCore-Logo-400.png" width="400" height="94" alt="HydraCore"></a>
+            <a class="navbar-brand" href="#" title="HydraCore">FMAT</a>
         </div>
         <nav class="navbar-collapse collapse">
             <ul class="nav navbar-nav" role="list">
@@ -167,3 +188,7 @@ if (isset($viewSettings['pageName'])) {
 </header>
 <div class="clear"></div>
 <section id="page">
+<div class="row">
+    <span class="col-md-12"><h1><?php echo $viewSettings['pageName']; ?></h1></span>
+</div>
+<div class="container">
