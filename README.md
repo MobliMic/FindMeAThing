@@ -5,6 +5,10 @@ Find Me A Thing
 
 Navigation app for use in bournemouth and make use of the wifi on the sea front
 
-#Todo
+#Collaborators
 
-* Things
+* [Michael Craddock](https://github.com/MobliMic)
+* [Ryan Howell](https://github.com/TheRyanHowell)
+* Chris Jaisingh
+* Kelvin Lockwood
+* [Charlie Tizard](https://github.com/8BitSensei)
