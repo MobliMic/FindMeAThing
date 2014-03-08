@@ -31,11 +31,11 @@ function calcRoute(start, end) {
     });
 }
 
-function recalc(){
+function reCalcMap(){
     calcRoute(String(window.coordinates.coords.latitude) + ', ' + String(window.coordinates.coords.longitude), String(window.urlVars['latitude']) + ', ' + String(window.urlVars['longitude']));
 }
 
-function init() {
+function initNav() {
     window.coordinates = {"timestamp": 0, "coords": {"speed": null, "heading": null, "altitudeAccuracy": null, "accuracy": 140000, "altitude": null, "longitude": 0, "latitude": 0}};
     window.urlVars = getUrlVars();
     if (typeof (window.urlVars['latitude']) != 'undefined') {
@@ -66,5 +66,5 @@ function init() {
 }
 
 $(document).ready(function () {
-    init();
+    initNav();
 });
