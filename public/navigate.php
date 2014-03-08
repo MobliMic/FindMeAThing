@@ -3,7 +3,7 @@ require_once('../.core/core.class.php');
 $pageSettings = [
     'views' => [
         'header' => [
-            'pageName' => 'Food - Restaurant',
+            'pageName' => 'Navigate',
             'sass' => ['main' => true],
             'js' => ['main' => true]
         ],
@@ -17,8 +17,6 @@ $thisPage = new HC_Page($pageSettings);
 // Render Header
 $thisPage->renderView('header');
 ?>
-
-
 
 
 
