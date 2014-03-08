@@ -23,27 +23,27 @@ $thisPage->renderView('header');
         <div class="row">
 
             <div class="col-md-3 sectionBox">
-                <span class="glyphicons-icons fast_food"></span>
 
-                <h2>Food</h2>
+                <h2><span class="glyphicons fast_food"></span>
+                    Food</h2>
             </div>
 
             <div class="col-md-3 sectionBox">
-                <span class="glyphicons car"></span>
 
-                <h2>Parking</h2>
+                <h2><span class="glyphicons car"></span>
+                    Parking</h2>
             </div>
 
             <div class="col-md-3 sectionBox">
-                <span class="glyphicons stroller"></span>
 
-                <h2>Family Areas</h2>
+                <h2><span class="glyphicons stroller"></span>
+                    Family Areas</h2>
             </div>
 
             <div class="col-md-3 sectionBox">
-                <span class="glyphicons cardio"></span>
 
-                <h2>Emergency Services</h2>
+                <h2><span class="glyphicons cardio"></span>
+                    Emergency Services</h2>
             </div>
 
         </div>
