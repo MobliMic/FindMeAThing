@@ -95,7 +95,8 @@ class F_Food {
                 )
 
             );
-            switch($types[][$x]) {
+
+            switch($types[$x]) {
                 case $x:
                     $resArray[$types[$x]]["Name"][$busiName[x]];
                     $resArray[$types[$x]]["ID"][$id[x]];
