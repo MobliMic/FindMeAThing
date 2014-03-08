@@ -21,11 +21,11 @@ $thisPage->renderView('header');
 
     <div class="row">
 
-        <div class="col-md-3 btn btn-success btn-lg btn-block">
+        <a href="/food" class="col-md-3 btn btn-success btn-lg btn-block">
 
             <h2><span class="glyphicons fast_food"></span>
                 Food</h2>
-        </div>
+        </a>
 
         <div class="col-md-3 btn btn-success btn-lg btn-block">
 
@@ -40,7 +40,7 @@ $thisPage->renderView('header');
             <h2><span class="glyphicons stroller"></span>
                 Family Areas</h2>
         </div>
-        
+
         <div class="col-md-3 btn btn-success btn-lg btn-block">
 
 
