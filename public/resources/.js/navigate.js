@@ -69,6 +69,7 @@ function calcRoute(start, end) {
                     $('#warningText').text(response.routes[0].warnings);
                     $('#warning').slideDown();
                 });
+                response.routes[0].warnings = '';
             }
             directionsDisplay.setDirections(response);
             showSteps(response);
