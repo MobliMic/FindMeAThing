@@ -8,10 +8,10 @@ function initializeNavigator() {
         zoom: 7,
         center: new google.maps.LatLng(41.850033, -87.6500523)
     };
-    var map = new google.maps.Map($('#map-canvas'),
+    var map = new google.maps.Map($('#map-canvas')[0],
         mapOptions);
     directionsDisplay.setMap(map);
-    directionsDisplay.setPanel($('#directions-panel'));
+    directionsDisplay.setPanel($('#directions-panel')[0]);
 }
 
 function calcRoute(start, end) {
