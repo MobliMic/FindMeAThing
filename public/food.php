@@ -39,6 +39,9 @@ $thisPage->renderView('header');
                 <span class="glyphicon star-empty"></span>
             </div>
         </div>
+
+        <span class="glyphicon star-empty"></span>
+
     </div>
 
 <?php
