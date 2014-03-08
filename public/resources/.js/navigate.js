@@ -64,11 +64,12 @@ function calcRoute(start, end) {
 
     directionsService.route(request, function(response, status) {
         if (status == google.maps.DirectionsStatus.OK) {
-            if(typeof(response.routes[0].warnings) != 'undefined'){
-                $('#warningText').text(response.routes[0].warnings);
-                $('#warning').slideDown();
+            if(response.routes[0].warnings != ''){
+                $('#warning').slideUp(400, function(){
+                    $('#warningText').text(response.routes[0].warnings);
+                    $('#warning').slideDown();
+                });
             }
-
             directionsDisplay.setDirections(response);
             showSteps(response);
         }
