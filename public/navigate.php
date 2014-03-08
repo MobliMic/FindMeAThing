@@ -18,6 +18,14 @@ $thisPage = new HC_Page($pageSettings);
 $thisPage->renderView('header');
 ?>
 	<div class="row">
+		<select id="mode" onchange="init();">
+			<option value="DRIVING" selected>Driving</option>
+			<option value="WALKING">Walking</option>
+			<option value="BICYCLING">Bicycling</option>
+			<option value="TRANSIT">Transit</option>
+		</select>
+	</div>
+	<div class="row">
 		<div class="col-md-6">
 			<div id="directions-panel"></div>
 		</div>
