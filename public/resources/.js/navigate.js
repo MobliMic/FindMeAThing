@@ -33,9 +33,20 @@ $(document).ready(function(){
     if(typeof(window.urlVars['lat']) != 'undefined'){
         if(typeof(window.urlVars['long']) != 'undefined'){
             updateCoordinates(function(r){
-                initializeNavigator();
-                calcRoute(String(r.coords.latitude) + ' ' + String(r.coords.longitude), String(window.urlVars['latitude']) + ' ' + String(window.urlVars['longitude']));
-            }, function(){
+                if(typeof(r) != 'undefined'){
+                    if(typeof(r.coords) != 'undefined'){
+                        initializeNavigator();
+                        calcRoute(String(r.coords.latitude) + ' ' + String(r.coords.longitude), String(window.urlVars['latitude']) + ' ' + String(window.urlVars['longitude']));
+                    } else {
+                        console.log(r);
+                        alert('Failed to get coordinates');
+                    }
+                } else {
+                    console.log(r);
+                    alert('Failed to get coordinates');
+                }
+            }, function(r){
+                console.log(r);
                 alert('Failed to get coordinates');
             });
         } else {
