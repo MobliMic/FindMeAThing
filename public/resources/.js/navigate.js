@@ -1,6 +1,6 @@
 console.log('Navigate');
 
-function initializeNavigator(lat, long) {
+function initializeNavigator(latitude, longitude) {
     if (typeof (window.directionsDisplay) == 'undefined') {
         window.directionsDisplay = new google.maps.DirectionsRenderer();
     }
@@ -11,7 +11,7 @@ function initializeNavigator(lat, long) {
 
     var map = new google.maps.Map($('#map-canvas')[0], {
         zoom: 7,
-        center: new google.maps.LatLng(lat, long)
+        center: new google.maps.LatLng(latitude, longitude)
     });
     directionsDisplay.setMap(map);
     directionsDisplay.setPanel($('#directions-panel')[0]);
