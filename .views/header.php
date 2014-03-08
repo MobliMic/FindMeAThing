@@ -42,6 +42,8 @@ if (isset($viewSettings['pageName'])) {
     <?php
     echo '<link rel="stylesheet" type="text/css" href="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/bootstrap/css/bootstrap.min.css">' . PHP_EOL;
     echo '<link rel="stylesheet" type="text/css" href="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/bootstrap/css/bootstrap-theme.min.css">' . PHP_EOL;
+    echo '<link rel="stylesheet" type="text/css" href="' . PROTOCOL . '://' . SITE_DOMAIN . '/resources/scss/glyphs.scss.css">' . PHP_EOL;
+
 
     // If this page uses sass
     if (isset($viewSettings['sass'])) {
