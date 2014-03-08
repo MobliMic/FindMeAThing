@@ -13,11 +13,11 @@
 	 */
 
 	$settings['constants'] = [
-		'SITE_DOMAIN' => 'local.hydracore.io',
-		'SITE_NAME'   => 'HydraCore',
+		'SITE_DOMAIN' => 'prototype.theryanhowell.co.uk',
+		'SITE_NAME'   => 'Find Me A Thing',
 		'ENVIRONMENT' => 'DEV',
 		'PROTOCOL'    => 'https',
-		'AUTHOR'      => 'Ryan Howell'
+		'AUTHOR'      => 'WeHasCode'
 	];
 
 	/**
@@ -26,17 +26,17 @@
 
 	$settings['database'] = [
 		'engine'       => 'mysql',
-		'host'         => 'local.hydracore.io',
-		'username'     => 'root',
-		'password'     => 'rnebcmzemvbn',
-		'databasename' => 'HydraCore'
+		'host'         => '',
+		'username'     => '',
+		'password'     => '',
+		'databasename' => ''
 	];
 
 	/**
 	 * Users
 	 */
 
-	$settings['users'] = ['salt' => 'h65be9/}Cv~\'L#d`M*3_e.;P;V{X`,ZrMv2.p?7UfLqt,>Dg~?R`#sj=E*U72.ywap]/K?\']4"ssF*sFn*(JU~`GxenQMN!yG"_7@2)+Pj/r]_]7V>\'8u[\'3DynFL)xfF'];
+	$settings['users'] = ['salt' => 'h65be9/}asd~\'L#d`M*3_e.;P;V{X`,ZrMv2.p?7UfLqt,>Dg~?R`#sj=E*U7wap]/K?\']4"ssF6drhFn*(JU~`GxenQMN!yG"_7@2)+Pj/r]_]7V>\'8u[\'3DynFL)xfF'];
 
 	/**
 	 * Compilation
@@ -46,8 +46,8 @@
 		'languages' => [
 			'js'   => true,
 			'sass' => true,
-			'less' => true,
-			'dart' => true
+			'less' => false,
+			'dart' => false
 		],
 		'path'      => '/resources/'
 	];

@@ -1,4 +1,4 @@
-HackBmthMarch2014
+Find Me A Thing
 =================
 
 [![Build Status](https://travis-ci.org/MobliMic/HackBmthMarch2014.png)](https://travis-ci.org/MobliMic/HackBmthMarch2014)
