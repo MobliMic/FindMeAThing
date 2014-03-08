@@ -1,7 +1,0 @@
-Components are external resources that are not specific to your project.
-
-For Example:
-
-jQuery
-BootStrap
-HTML5Shiv

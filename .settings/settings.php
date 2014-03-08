@@ -76,7 +76,7 @@
 		'forms'      => true,
 		'list'       => true,
 		'table'      => true,
-		'cacheViews' => true
+		'cacheViews' => false
 	];
 
 	/**

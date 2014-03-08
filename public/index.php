@@ -1,24 +1,57 @@
 <?php
-	require_once('../.core/core.class.php');
-	$pageSettings = [
-		'views' => [
-			'header' => [
-				'pageName' => 'Home',
-				'sass'     => ['main' => true],
-				'js'       => ['main' => true]
-			],
-			'body'   => true,
-			'footer' => true
-		],
-		'forms' => true
-	];
-	$thisPage = new HC_Page($pageSettings);
+require_once('../.core/core.class.php');
+$pageSettings = [
+    'views' => [
+        'header' => [
+            'pageName' => 'Home',
+            'sass' => ['main' => true],
+            'js' => ['main' => true]
+        ],
+        'body' => true,
+        'footer' => true
+    ],
+    'forms' => true
+];
+$thisPage = new HC_Page($pageSettings);
 
-	// Render Header
-	$thisPage->renderView('header');
+// Render Header
+$thisPage->renderView('header');
 ?>
-	<h1>HydraCore</h1>
+
+
+    <div class="row">
+
+        <a href="/food" class="col-md-3 btn btn-success btn-lg btn-block">
+
+            <h2><span class="glyphicons fast_food"></span>
+                Food</h2>
+        </a>
+
+        <div class="col-md-3 btn btn-success btn-lg btn-block">
+
+
+            <h2><span class="glyphicons car"></span>
+                Parking</h2>
+        </div>
+
+        <div class="col-md-3 btn btn-success btn-lg btn-block">
+
+
+            <h2><span class="glyphicons stroller"></span>
+                Family Areas</h2>
+        </div>
+
+        <div class="col-md-3 btn btn-success btn-lg btn-block">
+
+
+            <h2><span class="glyphicons cardio"></span>
+                Emergency Services</h2>
+        </div>
+
+    </div>
+
+
 <?php
-	// Render Footer
-	$thisPage->renderView('footer');
+// Render Footer
+$thisPage->renderView('footer');
 ?>

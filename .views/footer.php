@@ -1,7 +1,8 @@
+</div>
 </section>
 <footer>
 	<?php
-		echo '<small>' . AUTHOR . '</small>';
+		echo '<small>&copy; Copyright WeHasCode 2014 - Forever</small>';
 	?>
 </footer>
 </body>
