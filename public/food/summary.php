@@ -21,9 +21,9 @@ $thisPage->renderView('header');
 
     <div class="row">
 
-        <dl>
-            <dt><?php echo $_GET['name']; ?></dt>
-            <dd>Description</dd>
+        <dl">
+            <dt>Name</dt>
+            <dd><?php echo $_GET['name']; ?></dd>
 
             <dt>Name</dt>
             <dd>Description</dd>

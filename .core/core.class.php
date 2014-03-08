@@ -65,7 +65,9 @@
 				// Create Site using settings defined
 				require_once(HC_CORE_LOCATION . '/modules/data/site.class.php');
 				$this->site = new HC_Site($settings);
-                require_once('../.application/core.class.php');
+
+                define('HC_APP_CORE_LOCATION', str_replace('.core','.application', HC_CORE_LOCATION));
+                require_once(HC_APP_CORE_LOCATION . '/core.class.php');
 				return true;
 			}
 
