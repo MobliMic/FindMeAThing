@@ -24,18 +24,26 @@ $thisPage->renderView('header');
 
             <div class="col-md-3">
                 <span class="glyphicons-icon fast_food"></span>
+
+                <h2>Things</h2>
             </div>
 
             <div class="col-md-3">
+                <span class="glyphicons-icon fast_food"></span>
 
+                <h2>Things</h2>
             </div>
 
             <div class="col-md-3">
+                <span class="glyphicons-icon fast_food"></span>
 
+                <h2>Things</h2>
             </div>
 
             <div class="col-md-3">
+                <span class="glyphicons-icon fast_food"></span>
 
+                <h2>Things</h2>
             </div>
 
         </div>
