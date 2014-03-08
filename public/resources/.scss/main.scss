@@ -1,0 +1,183 @@
+/* Should generate to main.scss.css */
+/* Text Syling */
+$hydraGreen: #6ee267;
+$hydraBlue: #44a7d1;
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: .75em 0;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin: .83em 0;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1em 0;
+}
+
+h5 {
+  font-size: .83em;
+  margin: 1.5em 0;
+}
+
+h6 {
+  font-size: .75em;
+  margin: 1.67em 0;
+}
+
+/* ClearFix */
+.clear:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.navbar-toggle {
+  //background: #44a6d0;
+  .icon-bar {
+   // background: #6ee267;
+  }
+}
+
+html {
+  overflow: hidden !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+html, body {
+  height: 100% !important;
+  width: 100% !important;
+  overflow-x: hidden !important;
+  min-width: 277px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 505px) {
+  body {
+    overflow-x: auto;
+  }
+  .navbar-toggle {
+    width: 9%;
+    padding: 9px 1% 9px 1%;
+    .icon-bar {
+      width: 100%;
+    }
+  }
+  .navbar-brand {
+    width: 76%;
+    height: auto;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+/* Page */
+header, footer, nav, #page {
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, footer {
+  text-align: center;
+}
+
+footer {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.nav .navbar-nav {
+  float: right;
+  text-align: right;
+}
+
+@media (min-width: 990px) {
+  .nav .navbar-nav {
+    height: 124px !important;
+    li a {
+      height: 124px !important;
+    }
+  }
+  .navbar-nav li a {
+    padding-top: 53px;
+    padding-bottom: 35px;
+  }
+}
+
+@media (max-width: 990px) {
+  .navbar-nav {
+    width: 100%;
+    margin: 0 auto;
+    li a {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+ul, ol {
+  text-align: left;
+}
+
+li {
+  list-style-position: inside;
+}
+
+.hc-success {
+  background: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.hc-warning {
+  background: #fcf8e3;
+  border-color: #faebcc;
+}
+
+.hc-danger {
+  background: #f2dede;
+  border-color: #ebccd1;
+}
+
+.inline-input {
+  display: inline;
+  width: inherit;
+}
+
+@font-face {
+  font-family: 'Lobster';
+  src: url('../fonts/Lobster/lobster_1.4-webfont.eot');
+  src: url('../fonts/Lobster/lobster_1.4-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Lobster/lobster_1.4-webfont.woff') format('woff'), url('../fonts/Lobster/lobster_1.4-webfont.ttf') format('truetype'), url('../fonts/Lobster/lobster_1.4-webfont.svg#lobster_1.4regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.jumbotron h1 {
+  font-family: 'Lobster';
+  //color: $hydraBlue;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.39);
+  -webkit-text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.39);
+  -moz-text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.39);
+  -ms-text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.39);
+  -o-text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.39);
+}
+
+.hydraGreen {
+  color: $hydraGreen;
+}
+
+.hydraBlue {
+  color: $hydraBlue;
+}
