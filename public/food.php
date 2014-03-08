@@ -22,36 +22,42 @@ $thisPage->renderView('header');
         <a href="food/summary.php?name=Super%20Cool%20NomNom%20Place" class="btn btn-block btn-default text-left">
             Restaurant Name
             <br>
-            Type - 500m
-                <span class="pull-right glyphicons star"></span>
-                <span class="pull-right glyphicons star"></span>
-                <span class="pull-right glyphicons star"></span>
-                <span class="pull-right glyphicons star"></span>
+            500m -
+            <span class="glyphicons star"></span>
+            <span class="glyphicons star"></span>
+            <span class="glyphicons star"></span>
+            <span class="glyphicons star"></span>
         </a>
 
-        <div class="btn btn-block btn-default text-left">
+        <a href="food/summary.php?name=Ryans%20House" class="btn btn-block btn-default text-left">
             Restaurant Name
             <br>
-            Type - 500m
-                <span class="pull-right glyphicons star"></span>
-                <span class="pull-right glyphicons star"></span>
-        </div>
+            500m -
+            <span class="glyphicons star"></span>
+            <span class="glyphicons star"></span>
+            <span class="glyphicons star"></span>
+            <span class="glyphicons star"></span>
+        </a>
 
-        <div class="btn btn-block btn-default text-left">
+        <a href="food/summary.php?name=lololol" class="btn btn-block btn-default text-left">
             Restaurant Name
             <br>
-            Type - 500m
-                <span class="pull-right glyphicons star"></span>
-        </div>
+            500m -
+            <span class="glyphicons star"></span>
+            <span class="glyphicons star"></span>
+            <span class="glyphicons star"></span>
+            <span class="glyphicons star"></span>
+        </a>
 
-        <div class="btn btn-block btn-default text-left">
+        <a href="food/summary.php?name=Michael%20Is%20So%20Cool" class="btn btn-block btn-default text-left">
             Restaurant Name
             <br>
-            Type - 500m
-                <span class="pull-right glyphicons star"></span>
-                <span class="pull-right glyphicons star"></span>
-                <span class="pull-right glyphicons star"></span>
-        </div>
+            500m -
+            <span class="glyphicons star"></span>
+            <span class="glyphicons star"></span>
+            <span class="glyphicons star"></span>
+            <span class="glyphicons star"></span>
+        </a>
     </div>
 
 <?php
