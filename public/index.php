@@ -23,7 +23,7 @@ $thisPage->renderView('header');
         <div class="row">
 
             <div class="col-md-3">
-                <span class="glyphicons fast_food"></span>
+                <span class="glyphicons-icons fast_food"></span>
 
                 <h2>Food</h2>
             </div>
