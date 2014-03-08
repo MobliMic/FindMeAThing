@@ -24,6 +24,7 @@ $thisPage->renderView('header');
 			<option value="BICYCLING">Bicycling</option>
 			<option value="TRANSIT">Transit</option>
 		</select>
+		<br>
 	</div>
 	<div class="row">
 		<div class="col-md-6">
