@@ -22,8 +22,7 @@ $thisPage->renderView('header');
         <a href="food/summary.php?name=Super%20Cool%20NomNom%20Place" class="btn btn-block btn-default text-left">
             Restaurant Name
             <br>
-            500m -
-            <span class="glyphicons star"></span>
+            30m -
             <span class="glyphicons star"></span>
             <span class="glyphicons star"></span>
             <span class="glyphicons star"></span>
@@ -32,17 +31,14 @@ $thisPage->renderView('header');
         <a href="food/summary.php?name=Ryans%20House" class="btn btn-block btn-default text-left">
             Restaurant Name
             <br>
-            500m -
-            <span class="glyphicons star"></span>
-            <span class="glyphicons star"></span>
-            <span class="glyphicons star"></span>
+            143m -
             <span class="glyphicons star"></span>
         </a>
 
         <a href="food/summary.php?name=lololol" class="btn btn-block btn-default text-left">
             Restaurant Name
             <br>
-            500m -
+            1000m -
             <span class="glyphicons star"></span>
             <span class="glyphicons star"></span>
             <span class="glyphicons star"></span>
@@ -52,9 +48,7 @@ $thisPage->renderView('header');
         <a href="food/summary.php?name=Michael%20Is%20So%20Cool" class="btn btn-block btn-default text-left">
             Restaurant Name
             <br>
-            500m -
-            <span class="glyphicons star"></span>
-            <span class="glyphicons star"></span>
+            40,000m -
             <span class="glyphicons star"></span>
             <span class="glyphicons star"></span>
         </a>
