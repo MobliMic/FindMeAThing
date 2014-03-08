@@ -1,4 +1,4 @@
 HackBmthMarch2014
 =================
 
-Repo for whatever we decide to do at hackbmth this weekend
+Navigation app for use in bournemouth and make use of the wifi on the sea front
