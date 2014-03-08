@@ -34,15 +34,14 @@ $(document).ready(function(){
         if(typeof(window.urlVars['long']) != 'undefined'){
             updateCoordinates(function(r){
                 if(typeof(r) != 'undefined'){
-                    if(typeof(r.coords) != 'undefined'){
+                    if(typeof(r.latitude) != 'undefined'){
                         initializeNavigator();
-                        calcRoute(String(r.coords.latitude) + ' ' + String(r.coords.longitude), String(window.urlVars['latitude']) + ' ' + String(window.urlVars['longitude']));
+                        calcRoute(String(r.latitude) + ' ' + String(r.longitude), String(window.urlVars['latitude']) + ' ' + String(window.urlVars['longitude']));
                     } else {
                         console.log(r);
                         alert('Failed to get coordinates');
                     }
                 } else {
-                    console.log(r);
                     alert('Failed to get coordinates');
                 }
             }, function(r){

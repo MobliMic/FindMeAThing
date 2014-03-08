@@ -1,17 +1,17 @@
 console.log('Main');
 
 function updateCoordinates(success, failure){
-    var success_callback = function (a){
+    var success_callback = function (r){
         window.localStorage.setItem('coordinates', JSON.stringify(a.coords));
         if(typeof(success) != 'undefined'){
-            success.call(a);
+            success.call(r);
         }
     };
 
-    var error_callback = function (a){
-        console.log('Failure', a);
+    var error_callback = function (r){
+        console.log('Failure', r);
         if(typeof(failure) != 'undefined'){
-            failure.call(a);
+            failure.call(r);
         }
     };
 
