@@ -19,61 +19,39 @@ $thisPage->renderView('header');
 ?>
 
     <div class="row">
-        <a href="food_includes/summary.php" class="btn btn-block btn-default">
-            <span class="glyphicon french_press pull-left"></span>
+        <a href="food/summary.php?name=Super%20Cool%20NomNom%20Place" class="btn btn-block btn-default text-left">
             Restaurant Name
             <br>
-            Type - 500m
-            <div>
-                <span class="pull-right glyphicon star"></span>
-                <span class="pull-right glyphicon star"></span>
-                <span class="pull-right glyphicon star"></span>
-                <span class="pull-right glyphicon star"></span>
-                <span class="pull-right glyphicon star-empty"></span>
-            </div>
+            30m -
+            <span class="glyphicons star"></span>
+            <span class="glyphicons star"></span>
+            <span class="glyphicons star"></span>
         </a>
 
-        <div class="btn btn-block btn-default">
-            <span class="glyphicon french_press pull-left"></span>
+        <a href="food/summary.php?name=Ryans%20House" class="btn btn-block btn-default text-left">
             Restaurant Name
             <br>
-            Type - 500m
-            <div>
-                <span class="pull-right glyphicon star"></span>
-                <span class="pull-right glyphicon star"></span>
-                <span class="pull-right glyphicon star-empty"></span>
-                <span class="pull-right glyphicon star-empty"></span>
-                <span class="pull-right glyphicon star-empty"></span>
-            </div>
-        </div>
+            143m -
+            <span class="glyphicons star"></span>
+        </a>
 
-        <div class="btn btn-block btn-default">
-            <span class="glyphicon french_press pull-left"></span>
+        <a href="food/summary.php?name=lololol" class="btn btn-block btn-default text-left">
             Restaurant Name
             <br>
-            Type - 500m
-            <div>
-                <span class="pull-right glyphicon star"></span>
-                <span class="pull-right glyphicon star-empty"></span>
-                <span class="pull-right glyphicon star-empty"></span>
-                <span class="pull-right glyphicon star-empty"></span>
-                <span class="pull-right glyphicon star-empty"></span>
-            </div>
-        </div>
+            1000m -
+            <span class="glyphicons star"></span>
+            <span class="glyphicons star"></span>
+            <span class="glyphicons star"></span>
+            <span class="glyphicons star"></span>
+        </a>
 
-        <div class="btn btn-block btn-default">
-            <span class="glyphicon french_press pull-left"></span>
+        <a href="food/summary.php?name=Michael%20Is%20So%20Cool" class="btn btn-block btn-default text-left">
             Restaurant Name
             <br>
-            Type - 500m
-            <div>
-                <span class="pull-right glyphicon star"></span>
-                <span class="pull-right glyphicon star"></span>
-                <span class="pull-right glyphicon star"></span>
-                <span class="pull-right glyphicon star-empty"></span>
-                <span class="pull-right glyphicon star-empty"></span>
-            </div>
-        </div>
+            40,000m -
+            <span class="glyphicons star"></span>
+            <span class="glyphicons star"></span>
+        </a>
     </div>
 
 <?php
