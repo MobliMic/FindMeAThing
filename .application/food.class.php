@@ -8,7 +8,7 @@
 
 class F_Food {
 
-    public function __constructor(){
+    public function __construct(){
 
         $db = new HC_DB();
 
