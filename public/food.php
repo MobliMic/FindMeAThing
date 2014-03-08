@@ -19,60 +19,38 @@ $thisPage->renderView('header');
 ?>
 
     <div class="row">
-        <a href="food/summary.php" class="btn btn-block btn-default">
-            <span class="glyphicons french_press pull-left"></span>
+        <a href="food/summary.php?name=Super%20Cool%20NomNom%20Place" class="btn btn-block btn-default text-left">
             Restaurant Name
             <br>
             Type - 500m
-            <div>
                 <span class="pull-right glyphicons star"></span>
                 <span class="pull-right glyphicons star"></span>
                 <span class="pull-right glyphicons star"></span>
                 <span class="pull-right glyphicons star"></span>
-                <span class="pull-right glyphicons star-empty"></span>
-            </div>
         </a>
 
-        <div class="btn btn-block btn-default">
-            <span class="glyphicon french_press pull-left"></span>
+        <div class="btn btn-block btn-default text-left">
             Restaurant Name
             <br>
             Type - 500m
-            <div>
                 <span class="pull-right glyphicons star"></span>
                 <span class="pull-right glyphicons star"></span>
-                <span class="pull-right glyphicons star-empty"></span>
-                <span class="pull-right glyphicons star-empty"></span>
-                <span class="pull-right glyphicons star-empty"></span>
-            </div>
         </div>
 
-        <div class="btn btn-block btn-default">
-            <span class="glyphicon french_press pull-left"></span>
+        <div class="btn btn-block btn-default text-left">
             Restaurant Name
             <br>
             Type - 500m
-            <div>
                 <span class="pull-right glyphicons star"></span>
-                <span class="pull-right glyphicons star-empty"></span>
-                <span class="pull-right glyphicons star-empty"></span>
-                <span class="pull-right glyphicons star-empty"></span>
-                <span class="pull-right glyphicons star-empty"></span>
-            </div>
         </div>
 
-        <div class="btn btn-block btn-default">
-            <span class="glyphicon french_press pull-left"></span>
+        <div class="btn btn-block btn-default text-left">
             Restaurant Name
             <br>
             Type - 500m
-            <div>
                 <span class="pull-right glyphicons star"></span>
                 <span class="pull-right glyphicons star"></span>
                 <span class="pull-right glyphicons star"></span>
-                <span class="pull-right glyphicons star-empty"></span>
-                <span class="pull-right glyphicons star-empty"></span>
-            </div>
         </div>
     </div>
 
