@@ -23,10 +23,16 @@ $thisPage->renderView('header');
 
     $food = new F_Food();
 
-    $business = $food->getBusinesses();
+    //$business = $food->getBusinesses();
+
+    $db = new HC_DB();
+
+    $business = $db->query('select id from food');
+
+    $result = mysql_fetch_assoc($business);
 
     echo '<pre>';
-    print_r($business);
+    print_r($result);
 
     ?>
 </div>
