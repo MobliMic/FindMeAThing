@@ -128,9 +128,6 @@ function updateCompass(bearing) {
     var direction = 0;
     if (typeof window.orientation.webkitCompassHeading !== 'undefined') {
         direction = window.orientation.webkitCompassHeading;
-        if (typeof window.orientation !== 'undefined') {
-            direction += window.orientation;
-        }
     } else {
         // http://dev.w3.org/geo/api/spec-source-orientation.html#deviceorientation
         direction = 360 - window.orientation.alpha;
