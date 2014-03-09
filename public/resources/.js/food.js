@@ -5,6 +5,7 @@ console.log('food');
 
 function updateFoodList(object) {
 
+    console.log(object);
 
     $.each(object, function (index, value) {
         console.log(index);
@@ -22,8 +23,5 @@ function updateFoodList(object) {
 
 $(document).ready(function () {
     //updateCoordinates();
-    nearBusiness(function (object) {
-            updateFoodList(object);
-        }
-    );
+    nearBusiness(updateFoodList);
 });
