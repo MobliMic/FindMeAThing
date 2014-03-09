@@ -29,12 +29,35 @@ function getUrlVars() {
 
 function getOrientation(callback){
     window.orientation = {alpha: 0, beta: 0, gamma: 0};
+    window.ref = 0;
+    window.dir = 0;
+    var direction, delta, heading;
     window.addEventListener('deviceorientation', function(e) {
-        window.orientation = e;
-        callback.call(e);
+        console.log(e);
         $('#alpha').text(e.alpha);
         $('#beta').text(e.beta);
         $('#gamma').text(e.gamma);
+        e.direction = 360 - e.alpha;
+        var delta = Math.round(e.direction) - ref;
+        ref = Math.round(e.direction);
+        if (delta < -180)
+            delta += 360;
+        if (delta > 180)
+            delta -= 360;
+        dir += delta;
+
+        heading = direction;
+        while (heading >= 360) {
+            heading -= 360;
+        }
+        while (heading < 0) {
+            heading += 360;
+        }
+        heading = Math.round(heading);
+        e.heading = heading;
+        $('#direction').text(heading);
+        window.orientation = e;
+        callback.call(e);
     });
 }
 
