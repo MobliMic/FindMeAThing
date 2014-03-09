@@ -1,5 +1,6 @@
 <?php
 
+require_once('../../../.application/food.class.php');
 
 $food = new F_Food();
 
