@@ -5,10 +5,16 @@
 
 function updateFoodList() {
 
-    $.each(nearBusiness(), function (index, value) {
-        console.log(index);
-        console.warn(value);
-    });
+    var object = nearBusiness();
+    /*
+     $.each(object, function (index, value) {
+     console.log(index);
+     console.warn(value);
+     });*/
+
+    for (var key in object) {
+        console.log(object[key]);
+    }
 
 }
 
