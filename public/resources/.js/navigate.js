@@ -89,6 +89,8 @@ function initNav() {
     window.markerArray = [];
     window.coordinates = {"timestamp": 0, "coords": {"speed": null, "heading": null, "altitudeAccuracy": null, "accuracy": 140000, "altitude": null, "longitude": 0, "latitude": 0}};
     window.urlVars = getUrlVars();
+    window.ref = 0;
+    window.dir = 0;
     if (typeof (window.urlVars['latitude']) != 'undefined') {
         if (typeof (window.urlVars['longitude']) != 'undefined') {
             updateCoordinates(function () {
@@ -97,6 +99,11 @@ function initNav() {
                     if (typeof (r.coords) != 'undefined') {
                         initializeNavigator(r.coords.latitude, r.coords.longitude);
                         calcRoute(String(r.coords.latitude) + ', ' + String(r.coords.longitude), String(window.urlVars['latitude']) + ', ' + String(window.urlVars['longitude']));
+                        if(indow.deviceOrientation){
+                            getOrientation(function(c){
+                                console.log(c);
+                            });
+                        }
                     } else {
                         console.log(r);
                         alert('Failed to get coordinates');
