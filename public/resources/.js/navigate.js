@@ -127,10 +127,10 @@ function _toDeg(rad) {
 function updateCompass(bearing) {
     var direction = 0;
     if (typeof window.orientation.webkitCompassHeading !== 'undefined') {
-        direction = window.orientation.webkitCompassHeading;
+        direction = parseInt(window.orientation.webkitCompassHeading);
     } else {
         // http://dev.w3.org/geo/api/spec-source-orientation.html#deviceorientation
-        direction = 360 - window.orientation.alpha;
+        direction = 360 - parseInt(window.orientation.alpha);
     }
     if(isNaN(bearing)){
         //alert(bearing);
