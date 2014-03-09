@@ -126,11 +126,16 @@ function _toDeg(rad) {
 }
 function updateCompass(bearing) {
     var direction = 0;
-    if (typeof window.orientation.webkitCompassHeading !== 'undefined') {
-        direction = parseInt(window.orientation.webkitCompassHeading);
+    if (typeof window.orientation.heading !== 'undefined') {
+        direction = parseInt(window.orientation.heading);
     } else {
-        // http://dev.w3.org/geo/api/spec-source-orientation.html#deviceorientation
-        direction = 360 - parseInt(window.orientation.alpha);
+        if (typeof window.orientation.webkitCompassHeading !== 'undefined') {
+            direction = parseInt(window.orientation.webkitCompassHeading);
+        } else {
+            // http://dev.w3.org/geo/api/spec-source-orientation.html#deviceorientation
+            direction = 360 - parseInt(window.orientation.alpha);
+        }
+
     }
     if(isNaN(bearing)){
         //alert(bearing);
