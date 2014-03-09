@@ -75,6 +75,8 @@ class F_Food
         FROM
             food
         HAVING distance < ' . $distance . '
+        WHERE
+        BusinessTypeID IN (7843,7844,1)
         ORDER BY distance
         LIMIT 0 , 20
         ');
