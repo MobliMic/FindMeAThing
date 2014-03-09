@@ -12,7 +12,7 @@ function nearBusiness(callback) {
             'data': {'lat': window.coordinates.coords.latitude, 'long': window.coordinates.coords.longitude, 'dist': '10'},
             'success': function (data) {
                 console.log('success');
-                callback.call(data);
+                updateFoodList(data);
 
             }
         })
