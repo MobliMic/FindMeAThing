@@ -7,7 +7,7 @@ $pageSettings = [
             'sass' => ['main' => true],
             'js' => [
                 'main' => true,
-                'navigate' => true,
+                'convert' => true,
                 'food' => true,
                 'ajax' => true
             ]
