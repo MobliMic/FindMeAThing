@@ -5,7 +5,7 @@ $pageSettings = [
         'header' => [
             'pageName' => 'Food',
             'sass' => ['main' => true],
-            'js' => ['main' => true, 'navigate' => true, 'ajax' => true]
+            'js' => ['main' => true, 'navigate' => true, 'ajax' => true, 'food' => true]
         ],
         'body' => true,
         'footer' => true
@@ -18,10 +18,8 @@ $thisPage = new HC_Page($pageSettings);
 $thisPage->renderView('header');
 ?>
 
-    <div class="row">
-        <?php
+    <div class="row" id="locationContainer">
 
-        ?>
     </div>
 
     <div class="row">

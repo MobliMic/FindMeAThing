@@ -11,14 +11,10 @@ function nearBusiness() {
             'data': {'lat': window.coordinates.coords.latitude, 'long': window.coordinates.coords.longitude, 'dist': '10'},
             'success': function (data) {
 
-                consol.log(data);
+                console.log(data);
 
             }
         })
     });
 
 }
-
-$(document).ready(function () {
-    nearBusiness();
-});
