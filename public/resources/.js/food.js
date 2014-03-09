@@ -22,5 +22,8 @@ function updateFoodList(object) {
 
 $(document).ready(function () {
     //updateCoordinates();
-    nearBusiness(updateFoodList);
+    nearBusiness(function (object) {
+            updateFoodList(object);
+        }
+    );
 });
