@@ -87,7 +87,7 @@ class F_Food
                 "Location" => [
                     "Lat" => $key['Latitude'],
                     "Long" => $key['Longitude'],
-                    'Distance' => $key['distance']
+                    'DistanceMiles' => $key['distance']
                 ],
                 "Type" => $key['BusinessType'],
                 "Open" => $key['open'],
@@ -105,55 +105,6 @@ class F_Food
     public function getSingleBusiness($id)
     {
 
-    }
-
-
-    /**
-     * @deprecated
-     * @return array
-     */
-    public function findBusiness()
-    {
-        $this->arraySize = sizeof($this->businessTypeID);
-        $y = 0;
-        for ($x = 0; $x < $this->arraySize; $x++) {
-            // $resArray = $types[$x];
-            $this->resArray = array(
-                $this->types[$x] => array
-                (
-                    "Name",
-                    "ID",
-                    "Location" => array
-                    (
-                        "Lat",
-                        "Long"
-                    ),
-                    "Type",
-                    "Open",
-                    "Close",
-                    "Available",
-                    "Hygiene",
-                    "Rating"
-                )
-
-            );
-
-            switch ($this->types[$y][$x]) {
-                case $x:
-                    $this->resArray[$this->types[$x]]["Name"][$this->busiName[x]];
-                    $this->resArray[$this->types[$x]]["ID"][$this->id[x]];
-                    //$resCafCan["resCafCan"]["Name"][$loc[x,x]];
-                    $this->resArray[$this->types[$x]]["Type"][$this->businessType[x]];
-                    $this->resArray[$this->types[$x]]["Open"][$this->open[x]];
-                    $this->resArray[$this->types[$x]]["Close"][$this->close[x]];
-                    $this->resArray[$this->types[$x]]["Available"][$this->available[x]];
-                    $this->resArray[$this->types[$x]]["Hygiene"][$this->hyg[x]];
-                    $this->resArray[$this->types[$x]]["Rating"][$this->ratingValue[x]];
-                    break;
-            }
-        }
-
-        return $this->resArray;
     }
 
     public function searchType($searchType)
