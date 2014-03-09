@@ -31,14 +31,19 @@ $thisPage->renderView('header');
 		</select>
 		<br>
 	</div>
-	<div class="row">
-		<div class="col-md-6">
-			<div id="directions-panel"></div>
-		</div>
-		<div class="col-md-6">
-			<div id="map-canvas"></div>
-		</div>
-	</div>
+    <div class="row">
+        <div class="col-md-6">
+            <div id="directions-panel"></div>
+        </div>
+        <div class="col-md-6">
+            <div id="map-canvas"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div id="compass"><span id="alpha">0</span> <span id="beta">0</span> <span id="gamma">0</span></div>
+        </div>
+    </div>
 
 
 <?php

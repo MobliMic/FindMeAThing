@@ -31,7 +31,10 @@ function getOrientation(callback){
     window.orientation = {alpha: 0, beta: 0, gamma: 0};
     window.addEventListener('deviceorientation', function(e) {
         window.orientation = e;
-        callback.call();
+        callback.call(e);
+        $('#alpha').text(e.alpha);
+        $('#beta').text(e.beta);
+        $('#gamma').text(e.gamma);
     });
 }
 
