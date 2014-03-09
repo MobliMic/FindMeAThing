@@ -29,10 +29,10 @@ $thisPage->renderView('header');
 
     $business = $db->query('select id from food');
 
-    $result = mysql_fetch_assoc($business);
+
 
     echo '<pre>';
-    print_r($result);
+    print_r($business);
 
     ?>
 </div>
