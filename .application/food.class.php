@@ -40,25 +40,25 @@ class F_Food
 
         $businesses = [];
 
-        $rst = mysql_fetch_assoc($this->db->query("SELECT * FROM food"));
+        $result = $this->db->query("SELECT id, BusinessName, Latitude, Longitude, BusinessType, open, close, available, RatingValue FROM food");
 
-        $id = $rst["id"];
-        $businessName = $rst["BusinessName"];
-        $businessType = $rst["BusinessType"];
-        $businessTypeID = $rst["BusinessTypeID"];
-        $addressLine1 = $rst["AddressLine1"];
-        $addressLine2 = $rst["AddressLine2"];
-        $addressLine3 = $rst["AddressLine3"];
-        $addressLine4 = $rst["AddressLine4"];
-        $postCode = $rst["PostCode"];
-        $ratingValue = $rst["RatingValue"];
-        $locAuthWeb = $rst["LocalAuthorityWebsite"];
-        $long = $rst["Longitude"];
-        $lat = $rst["Latitude"];
-        $loc = array($this->long, $this->lat);
-        $available = $rst["available"];
-        $open = $rst["open"];
-        $close = $rst["close"];
+        foreach ($result as $key) {
+
+            $businesses[$key['id']] = [
+                "Name" => $key['BusinessName'],
+                "ID" => $key['id'],
+                "Location" => [
+                    "Lat" => $key['Latitude'],
+                    "Long" => $key['Longitude']
+                ],
+                "Type" => $key['BusinessType'],
+                "Open" => $key['open'],
+                "Close" => $key['close'],
+                "Available" => $key['available'],
+                "Rating" => $key['RatingValue']
+            ];
+
+        }
 
         return $businesses;
     }
