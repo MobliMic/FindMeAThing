@@ -27,11 +27,24 @@ function getUrlVars() {
 }
 
 
+function getOrientation(callback){
+    window.orientation = {alpha: 0, beta: 0, gamma: 0};
+    window.addEventListener('deviceorientation', function(e) {
+        window.orientation = e;
+        callback.call();
+    });
+}
+
 $(document).ready(function(){
     if(geo_position_js.init()){
-        window.geoInterval = setInterval(updateCoordinates(),10000);
-    }
-    else{
+        if (window.DeviceOrientationEvent) {
+            getOrientation(function(){
+                window.geoInterval = setInterval(updateCoordinates(),10000);
+            });
+        } else {
+            alert('No device orientation');
+        }
+    }else{
         alert("Functionality not available");
     }
 });
