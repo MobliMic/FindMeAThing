@@ -9,4 +9,4 @@ $distance = $_POST['dist'];
 
 $near = $food->getNearbyBusinesses($lat, $long, $distance);
 
-echo json_encode($near);
+print_r($near);
