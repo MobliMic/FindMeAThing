@@ -141,7 +141,7 @@ function updateCompass(bearing) {
         //alert(bearing);
     }
     if(isNaN(direction)){
-        alert(direction);
+        //alert(direction);
     }
     bearing = (parseInt(bearing)-parseInt(direction));
     $('#alpha').text(parseInt(window.orientation.alpha));
