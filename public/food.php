@@ -5,7 +5,12 @@ $pageSettings = [
         'header' => [
             'pageName' => 'Food',
             'sass' => ['main' => true],
-            'js' => ['main' => true, 'navigate' => true, 'ajax' => true, 'food' => true]
+            'js' => [
+                'main' => true,
+                'navigate' => true,
+                'food' => true,
+                'ajax' => true
+            ]
         ],
         'body' => true,
         'footer' => true
