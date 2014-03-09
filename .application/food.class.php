@@ -75,7 +75,6 @@ class F_Food
         FROM
             food
         HAVING distance < ' . $distance . '
-        WHERE
         ORDER BY distance
         LIMIT 0 , 20
         ');
