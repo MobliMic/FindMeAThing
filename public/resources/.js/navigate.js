@@ -135,10 +135,10 @@ function updateCompass(bearing) {
         // http://dev.w3.org/geo/api/spec-source-orientation.html#deviceorientation
         direction = 360 - window.orientation.alpha;
     }
-    if(isNan(bearing)){
+    if(isNaN(bearing)){
         //alert(bearing);
     }
-    if(isNan(direction)){
+    if(isNaN(direction)){
         alert(direction);
     }
     bearing = (parseInt(bearing)-parseInt(direction));
