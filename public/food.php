@@ -23,7 +23,7 @@ $thisPage->renderView('header');
 
     $food = new F_Food();
 
-    $business = $food->findBusiness();
+    $business = $food->getBusinesses();
 
     echo '<pre>';
     print_r($business);
