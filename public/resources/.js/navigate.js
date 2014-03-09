@@ -135,7 +135,7 @@ function updateCompass(bearing) {
         // http://dev.w3.org/geo/api/spec-source-orientation.html#deviceorientation
         direction = 360 - window.orientation.alpha;
     }
-    bearing = (parseFloat(bearing)-parseFloat(direction));
+    bearing = (parseInt(bearing)-parseInt(direction));
     $('#alpha').text(window.orientation.alpha);
     $('#beta').text(window.orientation.beta);
     $('#gamma').text(window.orientation.gamma);
@@ -161,7 +161,7 @@ function initNav() {
                         initializeNavigator(r.coords.latitude, r.coords.longitude);
                         calcRoute(String(r.coords.latitude) + ', ' + String(r.coords.longitude), String(window.urlVars['latitude']) + ', ' + String(window.urlVars['longitude']));
                         getOrientation(function(c){
-                             updateCompass(bearing(parseFloat(window.coordinates.coords.latitude),parseFloat(window.coordinates.coords.longitude), parseFloat(window.urlVars['latitude']), parseFloat(window.urlVars['longitude'])));
+                             updateCompass(bearing(parseInt(window.coordinates.coords.latitude),parseInt(window.coordinates.coords.longitude), parseInt(window.urlVars['latitude']), parseInt(window.urlVars['longitude'])));
                         });
                     } else {
                         console.log(r);
