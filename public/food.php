@@ -18,6 +18,19 @@ $thisPage = new HC_Page($pageSettings);
 $thisPage->renderView('header');
 ?>
 
+<div class="row">
+    <?php
+
+    $food = new F_Food();
+
+    $business = $food->findBusiness();
+
+    echo '<pre>';
+    print_r($business);
+
+    ?>
+</div>
+
     <div class="row">
         <a href="food/summary.php?name=Super%20Cool%20NomNom%20Place" class="btn btn-block btn-default text-left">
             Restaurant Name
