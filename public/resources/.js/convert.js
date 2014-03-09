@@ -16,7 +16,7 @@ function kmToMile(km) {
 
 function kmToM(km) {
 
-    return km / 1000;
+    return km * 1000;
 
 }
 
@@ -27,5 +27,5 @@ function milesToMeters(miles) {
     var meters = kmToM(km);
 
     return meters;
-    
+
 }
