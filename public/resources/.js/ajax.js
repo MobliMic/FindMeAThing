@@ -5,7 +5,7 @@ console.log('ajax');
 
 function nearBusiness(callback) {
 
-    updateCoordinates(function () {
+    updateCoordinates(function (callback) {
         $.ajax({
             'type': 'post',
             'url': '/resources/ajax/food.php',
