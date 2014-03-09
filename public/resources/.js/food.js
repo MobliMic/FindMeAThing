@@ -13,12 +13,19 @@ function updateFoodList(object) {
         console.log(index);
         console.warn(value);
 
+        var stars = '';
+        for (var x = 0; x < value.Rating; x++) {
+            stars += '<span class="glyphicons star"></span>';
+        }
+
         $('#locationContainer').append(
             '<a href="food/summary.php?name=Super%20Cool%20NomNom%20Place" class="btn btn-block btn-default text-left">' +
                 value.Name +
-                '<br>30m -<span class="glyphicons star"></span>' +
-                '<span class="glyphicons star"></span>' +
-                '<span class="glyphicons star"></span></a>'
+                '<br>' +
+                milesToMeters(value.Location.DistanceMiles) +
+                'm - ' +
+                stars
+                + '</a>'
         );
     });
 
