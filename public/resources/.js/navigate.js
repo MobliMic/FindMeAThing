@@ -136,10 +136,10 @@ function updateCompass(bearing) {
         direction = 360 - window.orientation.alpha;
     }
     if(isNan(bearing)){
-        alert(bearing);
+        //alert(bearing);
     }
     if(isNan(direction)){
-        //alert(direction);
+        alert(direction);
     }
     bearing = (parseInt(bearing)-parseInt(direction));
     $('#alpha').text(window.orientation.alpha);
