@@ -103,14 +103,14 @@ function initNav() {
                         });
                     } else {
                         console.log(r);
-                        alert('Failed to get coordinates');
+                        alert('Failed to get coordinates 3');
                     }
                 } else {
-                    alert('Failed to get coordinates');
+                    alert('Failed to get coordinates 2');
                 }
             }, function (r) {
                 console.log(r);
-                alert('Failed to get coordinates');
+                alert('Failed to get coordinates 1');
             });
         } else {
             alert('No longitude');
