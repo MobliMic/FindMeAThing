@@ -5,22 +5,27 @@ console.log('convert');
 
 function mileToKm(miles) {
 
-    return miles*1.60934;
+    return miles * 1.60934;
 
 }
 
 function kmToMile(km) {
 
-    return km/1.60934;
+    return km / 1.60934;
 }
 
 function kmToM(km) {
 
-    return km/1000;
+    return km / 1000;
 
 }
 
-function milesToMeters(miles){
+function milesToMeters(miles) {
 
-    return (miles*1.60934)/1000;
+    var km = mileToKm(miles);
+
+    var meters = kmToM(km);
+
+    return meters;
+    
 }
