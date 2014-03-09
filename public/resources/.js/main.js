@@ -25,7 +25,6 @@ function updateCoordinates(success, failure){
 function getOrientation(callback){
     window.orientation = {alpha: 0, beta: 0, gamma: 0};
     window.addEventListener('deviceorientation', function(e) {
-        console.log(e);
         window.orientation = e;
         callback.call(e);
     });
