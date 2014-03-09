@@ -11,7 +11,7 @@ class HC_F_Food_Class_Test extends PHPUnit_Framework_TestCase {
 
         $food = new F_Food();
 
-        $food->findBusiness();
+        $this->assertNotEmpty($food->findBusiness());
 
     }
 }

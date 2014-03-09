@@ -79,7 +79,7 @@ class F_Food {
         $this->open = $rst["open"];
         $this->close = $rst["close"];
 
-        typeID();
+        self::typeId();
     }
 
     public function typeId()
