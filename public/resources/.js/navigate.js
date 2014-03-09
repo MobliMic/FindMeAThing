@@ -139,9 +139,9 @@ function updateCompass(bearing) {
         alert(direction);
     }
     bearing = (parseInt(bearing)-parseInt(direction));
-    $('#alpha').text(window.orientation.alpha);
-    $('#beta').text(window.orientation.beta);
-    $('#gamma').text(window.orientation.gamma);
+    $('#alpha').text(parseInt()window.orientation.alpha);
+    $('#beta').text(parseInt(window.orientation.beta));
+    $('#gamma').text(parseInt(window.orientation.gamma));
     $('#direction').text(bearing);
     $('#compass').css('-ms-transform','rotate('  + (bearing) + 'deg)');
     $('#compass').css('-webkit-transform','rotate('  + (bearing) + 'deg)');
