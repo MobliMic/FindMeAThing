@@ -3,9 +3,8 @@
  */
 
 
-function updateFoodList() {
+function updateFoodList(object) {
 
-    var object = nearBusiness();
     /*
      $.each(object, function (index, value) {
      console.log(index);
@@ -21,5 +20,5 @@ function updateFoodList() {
 
 $(document).ready(function () {
     updateCoordinates();
-    updateFoodList();
+    nearBusiness(updateFoodList);
 });
