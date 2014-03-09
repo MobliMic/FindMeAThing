@@ -70,13 +70,12 @@ class F_Food
 
         $result = $this->db->query('
         SELECT
-            id, BusinessName, BusinessTypeID, Latitude, Longitude, BusinessType, open, close, available, RatingValue,
+            id, BusinessName, Latitude, Longitude, BusinessType, open, close, available, RatingValue,
             (3959 * acos(cos(radians(' . $userLat . ')) * cos(radians(Latitude)) * cos(radians(Longitude) - radians(' . $userLong . ')) + sin(radians(' . $userLat . ')) * sin(radians(Latitude)))) AS distance
         FROM
             food
         HAVING distance < ' . $distance . '
         WHERE
-            BusinessTypeID IN (7843,7844,1)
         ORDER BY distance
         LIMIT 0 , 20
         ');
