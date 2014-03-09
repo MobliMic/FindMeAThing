@@ -23,8 +23,8 @@ function updateFoodList(object) {
 
         $('#locationContainer').append(
             '<a href="food/summary.php?latitude=' +
-                value.Location.Latitude +
-                '&longitude='+ value.Location.Lonitude +'" class="btn btn-block btn-default text-left">' +
+                value.Location.Lat +
+                '&longitude='+ value.Location.Long +'" class="btn btn-block btn-default text-left">' +
                 value.Name +
                 '<br>' +
                 distRound +
