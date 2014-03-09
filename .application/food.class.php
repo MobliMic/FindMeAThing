@@ -86,7 +86,8 @@ class F_Food
                 "ID" => $key['id'],
                 "Location" => [
                     "Lat" => $key['Latitude'],
-                    "Long" => $key['Longitude']
+                    "Long" => $key['Longitude'],
+                    'Distance' => $key['distance']
                 ],
                 "Type" => $key['BusinessType'],
                 "Open" => $key['open'],
