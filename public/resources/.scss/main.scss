@@ -182,4 +182,18 @@ li {
   color: $hydraBlue;
 }
 
+#compass {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 50px 150px 50px;
+  border-color: transparent transparent #007bff transparent;
+  line-height: 0px;
+  _border-color: #000000 #000000 #007bff #000000;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+  -ms-transform: rotate(30deg); /* IE 9 */
+  -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+  transform: rotate(30deg);
+}
+
 @import 'layout';

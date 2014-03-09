@@ -53,6 +53,9 @@ function getOrientation(callback){
         }
         e.heading = Math.round(e.heading);
         $('#direction').text(e.direction);
+        $('#compass').css('-ms-transform','rotate('  +e.direction + 'deg)');
+        $('#compass').css('-webkit-transform','rotate('  +e.direction + 'deg)');
+        $('#compass').css('transform','rotate('  +e.direction + 'deg)');
         window.orientation = e;
         callback.call(e);
     });
