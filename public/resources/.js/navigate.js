@@ -183,5 +183,9 @@ function initNav() {
 }
 
 $(document).ready(function () {
-    initNav();
+    try {
+        initNav();
+    } catch(e) {
+        alert(e.message);
+    }
 });
