@@ -135,6 +135,9 @@ function updateCompass(bearing) {
         // http://dev.w3.org/geo/api/spec-source-orientation.html#deviceorientation
         direction = 360 - window.orientation.alpha;
     }
+    alert(JSON.stringify(window.orientation));
+    alert(bearing);
+    alert(direction);
     bearing = (parseInt(bearing)-parseInt(direction));
     $('#alpha').text(window.orientation.alpha);
     $('#beta').text(window.orientation.beta);
