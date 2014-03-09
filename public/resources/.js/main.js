@@ -49,10 +49,10 @@ function getOrientation(callback){
         $('#alpha').text(a);
         $('#beta').text(b);
         $('#gamma').text(g);
-        $('#direction').text(c);
-        $('#compass').css('-ms-transform','rotate('  + c + 'deg)');
-        $('#compass').css('-webkit-transform','rotate('  + c + 'deg)');
-        $('#compass').css('transform','rotate('  + c + 'deg)');
+        $('#direction').text((a - c));
+        $('#compass').css('-ms-transform','rotate('  + (a - c) + 'deg)');
+        $('#compass').css('-webkit-transform','rotate('  + (a - c) + 'deg)');
+        $('#compass').css('transform','rotate('  + (a - c) + 'deg)');
         window.orientation = e;
         callback.call(e);
     });
