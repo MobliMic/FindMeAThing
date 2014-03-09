@@ -1,6 +1,6 @@
 <?php
 
-require_once('../../../.application/food.class.php');
+require_once('../../../.core/core.class.php');
 
 $food = new F_Food();
 
