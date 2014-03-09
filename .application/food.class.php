@@ -40,7 +40,7 @@ class F_Food
 
         $businesses = [];
 
-        $rst = mysql_fetch_array($this->db->query("SELECT * FROM food"));
+        $rst = mysql_fetch_assoc($this->db->query("SELECT * FROM food"));
 
         $id = $rst["id"];
         $businessName = $rst["BusinessName"];
