@@ -37,13 +37,14 @@ function getOrientation(callback){
         $('#beta').text(e.beta);
         $('#gamma').text(e.gamma);
         e.direction = 360 - e.alpha;
+        
         e.delta = Math.round(e.direction) - ref;
         ref = Math.round(e.direction);
-        if (delta < -180)
-            delta += 360;
-        if (delta > 180)
-            delta -= 360;
-        dir += delta;
+        if (e.delta < -180)
+            e.delta += 360;
+        if (e.delta > 180)
+            e.delta -= 360;
+        dir += e.delta;
 
         e.heading = e.direction;
         while (heading >= 360) {
