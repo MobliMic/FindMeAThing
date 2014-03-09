@@ -34,25 +34,7 @@ function getUrlVars() {
 function getOrientation(callback){
     window.orientation = {alpha: 0, beta: 0, gamma: 0};
     window.addEventListener('deviceorientation', function(e) {
-        console.log(e);
-        // y-axis - yaw
-        var g = e.gamma || 0;
-        // x-axis - tilt
-        var b = e.beta || 0;
-        // z=axis - swivel
-        var a = e.alpha || 0;
-        // degree north
-        var c = e.compassHeading || e.webkitCompassHeading || 0;
-        // accuracy in deg
-        var accuracy = e.compassAccuracy || e.webkitCompassAccuracy || 0;
-
-        $('#alpha').text(a);
-        $('#beta').text(b);
-        $('#gamma').text(g);
-        $('#direction').text((a - c));
-        $('#compass').css('-ms-transform','rotate('  + (a - c) + 'deg)');
-        $('#compass').css('-webkit-transform','rotate('  + (a - c) + 'deg)');
-        $('#compass').css('transform','rotate('  + (a - c) + 'deg)');
+        console.log(e);;
         window.orientation = e;
         callback.call(e);
     });

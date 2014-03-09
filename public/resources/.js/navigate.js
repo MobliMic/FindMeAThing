@@ -85,6 +85,66 @@ function reCalcMap(){
     calcRoute(String(window.coordinates.coords.latitude) + ', ' + String(window.coordinates.coords.longitude), String(window.urlVars['latitude']) + ', ' + String(window.urlVars['longitude']));
 }
 
+/**
+ * Calculate the bearing between two positions as a value from 0-360
+ *
+ * @param lat1 - The latitude of the first position
+ * @param lng1 - The longitude of the first position
+ * @param lat2 - The latitude of the second position
+ * @param lng2 - The longitude of the second position
+ *
+ * @return int - The bearing between 0 and 360
+ */
+function bearing(lat1,lng1,lat2,lng2) {
+    var dLon = (lng2-lng1);
+    var y = Math.sin(dLon) * Math.cos(lat2);
+    var x = Math.cos(lat1)*Math.sin(lat2) - Math.sin(lat1)*Math.cos(lat2)*Math.cos(dLon);
+    var brng = this._toDeg(Math.atan2(y, x));
+    return 360 - ((brng + 360) % 360);
+}
+
+/**
+ * Since not all browsers implement this we have our own utility that will
+ * convert from degrees into radians
+ *
+ * @param deg - The degrees to be converted into radians
+ * @return radians
+ */
+function _toRad(deg) {
+    return deg * Math.PI / 180;
+}
+
+/**
+ * Since not all browsers implement this we have our own utility that will
+ * convert from radians into degrees
+ *
+ * @param rad - The radians to be converted into degrees
+ * @return degrees
+ */
+function _toDeg(rad) {
+    return rad * 180 / Math.PI;
+}
+function updateCompass(bearing) {
+    var direction = 0;
+    if (typeof window.orientation.webkitCompassHeading !== 'undefined') {
+        direction = window.orientation.webkitCompassHeading;
+        if (typeof window.orientation !== 'undefined') {
+            direction += window.orientation;
+        }
+    } else {
+        // http://dev.w3.org/geo/api/spec-source-orientation.html#deviceorientation
+        direction = 360 - window.orientation.alpha;
+    }
+    bearing = (parseFloat(bearing)-parseFloat(direction));
+    $('#alpha').text(window.coordinates.coords.alpha);
+    $('#beta').text(window.coordinates.coords.beta);
+    $('#gamma').text(window.coordinates.coords.gamma);
+    $('#direction').text(bearing);
+    $('#compass').css('-ms-transform','rotate('  + (bearing) + 'deg)');
+    $('#compass').css('-webkit-transform','rotate('  + (bearing) + 'deg)');
+    $('#compass').css('transform','rotate('  + (bearing) + 'deg)');
+}
+
 function initNav() {
     window.markerArray = [];
     window.coordinates = {"timestamp": 0, "coords": {"speed": null, "heading": null, "altitudeAccuracy": null, "accuracy": 140000, "altitude": null, "longitude": 0, "latitude": 0}};
@@ -100,7 +160,7 @@ function initNav() {
                         initializeNavigator(r.coords.latitude, r.coords.longitude);
                         calcRoute(String(r.coords.latitude) + ', ' + String(r.coords.longitude), String(window.urlVars['latitude']) + ', ' + String(window.urlVars['longitude']));
                         getOrientation(function(c){
-                             console.log(c);
+                             updateCompass(bearing(parseFloat(r.coords.latitude),parseFloat(r.coords.longitude), parseFloat(window.urlVars['latitude']), parseFloat(window.urlVars['longitude'])));
                         });
                     } else {
                         console.log(r);
