@@ -35,31 +35,24 @@ function getOrientation(callback){
     window.orientation = {alpha: 0, beta: 0, gamma: 0};
     window.addEventListener('deviceorientation', function(e) {
         console.log(e);
-        $('#alpha').text(e.alpha);
-        $('#beta').text(e.beta);
-        $('#gamma').text(e.gamma);
-        e.direction = 360 - e.alpha;
+        // y-axis - yaw
+        var g = e.gamma || 0;
+        // x-axis - tilt
+        var b = e.beta || 0;
+        // z=axis - swivel
+        var a = e.alpha || 0;
+        // degree north
+        var c = e.compassHeading || e.webkitCompassHeading || 0;
+        // accuracy in deg
+        var accuracy = e.compassAccuracy || e.webkitCompassAccuracy || 0;
 
-        e.delta = Math.round(e.direction) - ref;
-        ref = Math.round(e.direction);
-        if (e.delta < -180)
-            e.delta += 360;
-        if (e.delta > 180)
-            e.delta -= 360;
-        dir += e.delta;
-
-        e.heading = e.direction;
-        while (heading >= 360) {
-            e.heading -= 360;
-        }
-        while (heading < 0) {
-            e. heading += 360;
-        }
-        e.heading = Math.round(e.heading);
-        $('#direction').text(e.direction);
-        $('#compass').css('-ms-transform','rotate('  +e.direction + 'deg)');
-        $('#compass').css('-webkit-transform','rotate('  +e.direction + 'deg)');
-        $('#compass').css('transform','rotate('  +e.direction + 'deg)');
+        $('#alpha').text(a);
+        $('#beta').text(b);
+        $('#gamma').text(g);
+        $('#direction').text(c);
+        $('#compass').css('-ms-transform','rotate('  + c + 'deg)');
+        $('#compass').css('-webkit-transform','rotate('  + c + 'deg)');
+        $('#compass').css('transform','rotate('  + c + 'deg)');
         window.orientation = e;
         callback.call(e);
     });
