@@ -1,5 +1,6 @@
 <?php
 
+require_once('../../../.core/core.class.php');
 
 $food = new F_Food();
 
@@ -9,4 +10,4 @@ $distance = $_POST['dist'];
 
 $near = $food->getNearbyBusinesses($lat, $long, $distance);
 
-return json_encode($near);
+print_r($near);
