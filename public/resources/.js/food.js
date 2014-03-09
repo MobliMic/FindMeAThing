@@ -22,7 +22,7 @@ function updateFoodList(object) {
         }
 
         $('#locationContainer').append(
-            '<a href="food/navigate?latitude=' +
+            '<a href="/navigate.php?latitude=' +
                 value.Location.Lat +
                 '&longitude='+ value.Location.Long +'" class="btn btn-block btn-default text-left">' +
                 value.Name +
