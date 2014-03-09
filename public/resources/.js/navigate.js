@@ -46,8 +46,6 @@ function attachInstructionText(marker, text) {
 }
 
 function calcRoute(start, end) {
-    console.log(start, end);
-
     // First, remove any existing markers from the map.
     for (var i = 0; i < markerArray.length; i++) {
         markerArray[i].setMap(null);
@@ -151,7 +149,6 @@ function updateCompass(bearing) {
     $('#compass').css('-ms-transform','rotate('  + (bearing) + 'deg)');
     $('#compass').css('-webkit-transform','rotate('  + (bearing) + 'deg)');
     $('#compass').css('transform','rotate('  + (bearing) + 'deg)');
-    console.log(direction, bearing);
 }
 
 function initNav() {
@@ -168,12 +165,12 @@ function initNav() {
                     if (typeof (r.coords) != 'undefined') {
                         initializeNavigator(r.coords.latitude, r.coords.longitude);
                         calcRoute(String(r.coords.latitude) + ', ' + String(r.coords.longitude), String(window.urlVars['latitude']) + ', ' + String(window.urlVars['longitude']));
-                        getOrientation(function(c){
-                            var bearingstuffs = bearing(
-                                parseInt(window.coordinates.coords.latitude),parseInt(window.coordinates.coords.longitude), parseInt(window.urlVars['latitude']), parseInt(window.urlVars['longitude'])
-                            );
-                            updateCompass(bearingstuffs);
-                        });
+                        //getOrientation(function(c){
+                          //  var bearingstuffs = bearing(
+                            //    parseInt(window.coordinates.coords.latitude),parseInt(window.coordinates.coords.longitude), parseInt(window.urlVars['latitude']), parseInt(window.urlVars['longitude'])
+                            //);
+                            //updateCompass(bearingstuffs);
+                        //});
                     } else {
                         console.log(r);
                         alert('Failed to get coordinates 3');

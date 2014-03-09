@@ -39,13 +39,6 @@ $thisPage->renderView('header');
             <div id="map-canvas"></div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-6">
-            <p><span id="alpha">0</span> <br> <span id="beta">0</span> <br> <span id="gamma">0</span> <br> <span id="heading">0</span> <br> <span id="direction">0</span></p>
-            <div id="compass"></div>
-        </div>
-    </div>
-
 
 <?php
 // Render Footer
