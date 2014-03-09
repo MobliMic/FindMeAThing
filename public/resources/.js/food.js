@@ -7,9 +7,9 @@ function updateFoodList(object) {
 
     console.log(object);
 
-    object = json.parse(object);
+    var newobject = json.parse(object);
 
-    $.each(object, function (index, value) {
+    $.each(newobject, function (index, value) {
         console.log(index);
         console.warn(value);
     });

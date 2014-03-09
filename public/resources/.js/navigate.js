@@ -142,14 +142,14 @@ function updateCompass(bearing) {
         alert(direction);
     }
     bearing = (parseInt(bearing)-parseInt(direction));
-   /* $('#alpha').text(window.orientation.alpha);
+    $('#alpha').text(window.orientation.alpha);
     $('#beta').text(window.orientation.beta);
     $('#gamma').text(window.orientation.gamma);
     $('#direction').text(bearing);
     $('#compass').css('-ms-transform','rotate('  + (bearing) + 'deg)');
     $('#compass').css('-webkit-transform','rotate('  + (bearing) + 'deg)');
     $('#compass').css('transform','rotate('  + (bearing) + 'deg)');
-    console.log(direction, bearing);*/
+    console.log(direction, bearing);
 }
 
 function initNav() {
