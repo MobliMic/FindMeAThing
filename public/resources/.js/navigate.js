@@ -186,6 +186,6 @@ $(document).ready(function () {
     try {
         initNav();
     } catch(e) {
-        alert(e.message);
+        alert(JSON.stringify(e));
     }
 });
