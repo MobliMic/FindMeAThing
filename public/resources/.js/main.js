@@ -11,7 +11,6 @@ function updateCoordinates(success, failure){
 
     var error_callback = function (r){
         console.log('Failure', r);
-        alert(JSON.stringify(r));
         if(typeof(failure) != 'undefined'){
             failure.call(r);
         }
@@ -26,9 +25,6 @@ function updateCoordinates(success, failure){
 function getOrientation(callback){
     window.orientation = {alpha: 0, beta: 0, gamma: 0};
     window.addEventListener('deviceorientation', function(e) {
-        if(window.coordinates === {alpha: 0, beta: 0, gamma: 0}){
-            alert(JSON.stringify(e));
-        }
         console.log(e);
         window.orientation = e;
         callback.call(e);
