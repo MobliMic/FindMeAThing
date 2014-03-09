@@ -99,7 +99,7 @@ function initNav() {
                     if (typeof (r.coords) != 'undefined') {
                         initializeNavigator(r.coords.latitude, r.coords.longitude);
                         calcRoute(String(r.coords.latitude) + ', ' + String(r.coords.longitude), String(window.urlVars['latitude']) + ', ' + String(window.urlVars['longitude']));
-                        if(indow.deviceOrientation){
+                        if(window.deviceOrientation){
                             getOrientation(function(c){
                                 console.log(c);
                             });
