@@ -18,25 +18,11 @@ $thisPage = new HC_Page($pageSettings);
 $thisPage->renderView('header');
 ?>
 
-<div class="row">
-    <?php
+    <div class="row">
+        <?php
 
-    $food = new F_Food();
-
-    $business = $food->getBusinesses();
-
-    $lat = '50.726';
-    $long = '-1.81373';
-    $distance = '10';
-
-    $near = $food->getNearbyBusinesses($lat, $long, $distance);
-
-    echo '<pre>';
-    print_r($near);
-    echo '</pre>';
-
-    ?>
-</div>
+        ?>
+    </div>
 
     <div class="row">
         <a href="food/summary.php?name=Super%20Cool%20NomNom%20Place" class="btn btn-block btn-default text-left">
