@@ -94,16 +94,13 @@ function initNav() {
     if (typeof (window.urlVars['latitude']) != 'undefined') {
         if (typeof (window.urlVars['longitude']) != 'undefined') {
             updateCoordinates(function () {
-                var r = window.coordinates = JSON.parse(window.localStorage.getItem('coordinates'));
                 if (typeof (r) != 'undefined') {
                     if (typeof (r.coords) != 'undefined') {
                         initializeNavigator(r.coords.latitude, r.coords.longitude);
                         calcRoute(String(r.coords.latitude) + ', ' + String(r.coords.longitude), String(window.urlVars['latitude']) + ', ' + String(window.urlVars['longitude']));
-                        if(window.deviceOrientation){
-                            getOrientation(function(c){
-                                console.log(c);
-                            });
-                        }
+                        getOrientation(function(c){
+                             console.log(c);
+                        });
                     } else {
                         console.log(r);
                         alert('Failed to get coordinates');
