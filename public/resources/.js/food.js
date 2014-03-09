@@ -11,6 +11,8 @@ function updateFoodList(object) {
      console.warn(value);
      });*/
 
+    console.log('im running');
+
     for (var key in object) {
         console.log(object[key]);
     }
@@ -19,6 +21,6 @@ function updateFoodList(object) {
 
 
 $(document).ready(function () {
-    updateCoordinates();
+    //updateCoordinates();
     nearBusiness(updateFoodList);
 });
