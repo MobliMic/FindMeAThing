@@ -14,7 +14,7 @@ function updateFoodList(object) {
         console.warn(value);
 
         var stars = '';
-        for (x = 0; x < value.Rating; x++) {
+        for (var x = 0; x < value.Rating; x++) {
             stars += '<span class="glyphicons star"></span>';
         }
 
