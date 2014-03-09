@@ -3,17 +3,22 @@
  */
 
 
-function updateFoodList() {
+function updateFoodList(object) {
 
-    $.each(nearBusiness(), function (index, value) {
-        console.log(index);
-        console.warn(value);
-    });
+    /*
+     $.each(object, function (index, value) {
+     console.log(index);
+     console.warn(value);
+     });*/
+
+    for (var key in object) {
+        console.log(object[key]);
+    }
 
 }
 
 
 $(document).ready(function () {
     updateCoordinates();
-    updateFoodList();
+    nearBusiness(updateFoodList);
 });

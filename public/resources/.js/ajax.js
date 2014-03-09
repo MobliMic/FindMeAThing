@@ -2,7 +2,7 @@
  * Created by Michael on 09/03/14.
  */
 
-function nearBusiness() {
+function nearBusiness(callback) {
 
     updateCoordinates(function () {
         $.ajax({
@@ -11,7 +11,7 @@ function nearBusiness() {
             'data': {'lat': window.coordinates.coords.latitude, 'long': window.coordinates.coords.longitude, 'dist': '10'},
             'success': function (data) {
 
-                console.log(data);
+                callback.call(data);
 
             }
         })
