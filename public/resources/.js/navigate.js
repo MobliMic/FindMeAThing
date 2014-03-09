@@ -165,12 +165,12 @@ function initNav() {
                     if (typeof (r.coords) != 'undefined') {
                         initializeNavigator(r.coords.latitude, r.coords.longitude);
                         calcRoute(String(r.coords.latitude) + ', ' + String(r.coords.longitude), String(window.urlVars['latitude']) + ', ' + String(window.urlVars['longitude']));
-                        getOrientation(function(c){
-                            var bearingstuffs = bearing(
-                                parseInt(window.coordinates.coords.latitude),parseInt(window.coordinates.coords.longitude), parseInt(window.urlVars['latitude']), parseInt(window.urlVars['longitude'])
-                            );
-                            updateCompass(bearingstuffs);
-                        });
+                        //getOrientation(function(c){
+                          //  var bearingstuffs = bearing(
+                            //    parseInt(window.coordinates.coords.latitude),parseInt(window.coordinates.coords.longitude), parseInt(window.urlVars['latitude']), parseInt(window.urlVars['longitude'])
+                            //);
+                            //updateCompass(bearingstuffs);
+                        //});
                     } else {
                         console.log(r);
                         alert('Failed to get coordinates 3');
