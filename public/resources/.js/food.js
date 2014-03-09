@@ -22,7 +22,7 @@ function updateFoodList(object) {
             '<a href="food/summary.php?name=Super%20Cool%20NomNom%20Place" class="btn btn-block btn-default text-left">' +
                 value.Name +
                 '<br>' +
-                value.Location.DistanceMiles +
+                milesToMeters(value.Location.DistanceMiles) +
                 'm - ' +
                 stars
                 + '</a>'
