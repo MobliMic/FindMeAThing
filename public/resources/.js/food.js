@@ -13,6 +13,9 @@ function updateFoodList(object) {
         console.log(index);
         console.warn(value);
 
+        var dist = milesToMeters(value.Location.DistanceMiles);
+        var distRound = dist.toFixed();
+
         var stars = '';
         for (var x = 0; x < value.Rating; x++) {
             stars += '<span class="glyphicons star"></span>';
@@ -22,7 +25,7 @@ function updateFoodList(object) {
             '<a href="food/summary.php?name=Super%20Cool%20NomNom%20Place" class="btn btn-block btn-default text-left">' +
                 value.Name +
                 '<br>' +
-                milesToMeters(value.Location.DistanceMiles) +
+                distRound +
                 'm - ' +
                 stars
                 + '</a>'
