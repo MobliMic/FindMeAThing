@@ -23,7 +23,13 @@ $thisPage->renderView('header');
 
     $food = new F_Food();
 
-    $business = $food->getBusinesses();
+    //$business = $food->getBusinesses();
+
+    $db = new HC_DB();
+
+    $business = $db->query('select id from food');
+
+
 
     echo '<pre>';
     print_r($business);
