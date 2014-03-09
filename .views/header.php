@@ -74,7 +74,6 @@ if (isset($viewSettings['pageName'])) {
     echo '<script src="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/bootstrap/js/bootstrap.min.js"></script>' . PHP_EOL;
     echo '<script src="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/modernizr/modernizr.custom.17895.js"></script>' . PHP_EOL;
     echo '<script src="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/webshims/polyfiller.js"></script>' . PHP_EOL;
-    echo '<script src="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/geo/geo-min.js"></script>' . PHP_EOL;
 
     // If this page uses js
     if (isset($viewSettings['js'])) {

@@ -14,8 +14,11 @@ function updateCoordinates(success, failure){
             failure.call(r);
         }
     };
-
-    geo_position_js.getCurrentPosition(success_callback,error_callback);
+    if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(success_callback,error_callback);
+    } else {
+        alert('Could not get location');
+    }
 }
 
 function getUrlVars() {
