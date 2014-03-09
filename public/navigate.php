@@ -41,7 +41,7 @@ $thisPage->renderView('header');
     </div>
     <div class="row">
         <div class="col-md-6">
-            <div id="compass"><span id="alpha">0</span> <br> <span id="beta">0</span> <br> <span id="gamma">0</span> <br> <span id="heading">0</span></div>
+            <div id="compass"><span id="alpha">0</span> <br> <span id="beta">0</span> <br> <span id="gamma">0</span> <br> <span id="heading">0</span> <br> <span id="direction">0</span></div>
         </div>
     </div>
 
