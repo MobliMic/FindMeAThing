@@ -11,7 +11,6 @@ if (isset($viewSettings['pageName'])) {
     <meta charset="utf-8">
     <title><?php echo $pageName; ?></title>
     <meta name="description" content="Location services for tourists in Bournemouth. Made for NHTG 2014">
-    <meta name="keywords" content="HydraCore, hydra, core, php, development, framework, system core"/>
     <meta name="author" content="WeHasCode (https://github.com/orgs/WeHasCode/)">
 
     <link rel="shortcut icon" href="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/favicon.ico" type="image/icon">
@@ -75,7 +74,6 @@ if (isset($viewSettings['pageName'])) {
     echo '<script src="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/bootstrap/js/bootstrap.min.js"></script>' . PHP_EOL;
     echo '<script src="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/modernizr/modernizr.custom.17895.js"></script>' . PHP_EOL;
     echo '<script src="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/webshims/polyfiller.js"></script>' . PHP_EOL;
-    echo '<script src="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/geo/geo-min.js"></script>' . PHP_EOL;
 
     // If this page uses js
     if (isset($viewSettings['js'])) {
@@ -92,19 +90,8 @@ if (isset($viewSettings['pageName'])) {
         }
     }
     ?>
-    <meta property="og:title" content="<?php echo $pageName; ?>">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>">
-    <meta property="og:image" content="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/favicon.png">
-    <meta property="fb:app_id" content="489547091155432">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:url" content="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>">
-    <meta name="twitter:title" content="<?php echo $pageName; ?>">
-    <meta name="twitter:description"
-          content="A modern PHP framework core, designed from scratch to be a refreshing coding experience.">
-    <meta name="twitter:image" content="<?php echo PROTOCOL . '://' . SITE_DOMAIN; ?>/favicon.png">
-    <meta name="twitter:site" content="@HydraCoreIO">
-    <link rel="publisher" href="https://plus.google.com/101420792682409929479">
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+
     <!--[if lt IE 9]>
     <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <script src="https://raw2.github.com/scottjehl/Respond/master/src/respond.js"></script>
@@ -122,8 +109,8 @@ if (isset($viewSettings['pageName'])) {
             m.parentNode.insertBefore(a, m)
         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-47069574-1', 'hydracore.io');
-        ga('send', 'pageview');
+        //ga('create', 'UA-47069574-1', 'hydracore.io');
+        //ga('send', 'pageview');
     </script>
 </head>
 <body>
@@ -132,7 +119,7 @@ if (isset($viewSettings['pageName'])) {
     $(document).ready(function () {
         window.fbAsyncInit = function () {
             FB.init({
-                appId: 489547091155432,
+                //appId: '',
                 status: true,
                 cookie: true,
                 xfbml: true

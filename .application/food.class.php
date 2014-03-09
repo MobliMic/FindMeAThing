@@ -1,116 +1,123 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Charlie
  * Date: 08/03/14
  * Time: 14:49
  */
+class F_Food
+{
 
-class F_Food {
+    var $db;
 
-    public function __construct(){
+    public function __construct()
+    {
+        $this->db = new HC_DB();
 
-        $db = new HC_DB();
-
-        $rst = mysql_fetch_array( $db->query("SELECT * FROM food"));
-        $typeRst = mysql_fetch_array($db->query("SELECT BusinessType, BusinessTypeID FROM food"));
-
-        $types = array();
-
-        $id = $rst["id"];
-        $fhrsid = $rst["FHRSID"];
-        $LocAuthBusID = $rst["LocalAuthorityBusinessID"];
-        $businessName = $rst["BusinessName"];
-        $businessType = $rst["BusinessType"];
-        $businessTypeID = $rst["BusinessTypeID"];
-        $addressLine1 = $rst["AddressLine1"];
-        $addressLine2 = $rst["AddressLine2"];
-        $addressLine3 = $rst["AddressLine3"];
-        $addressLine4 = $rst["AddressLine4"];
-        $postCode = $rst["PostCode"];
-        $ratingValue = $rst["RatingValue"];
-        $ratingKey = $rst["RatingKey"];
-        $ratingDate = $rst["RatingDate"];
-        $locAuthCode = $rst["LocalAuthorityCode"];
-        $locAuthName = $rst["LocalAuthorityName"];
-        $locAuthWeb = $rst["LocalAuthorityWebsite"];
-        $LocAuthEmaAdd = $rst["LocalAuthorityEmailAddress"];
-        $hyg = $rst["Hygiene"];
-        $struct = $rst["Structural"];
-        $confInMan = $rst["ConfidenceInManagement"];
-        $schemeType = $rst["SchemeType"];
-        $long = $rst["Longitude"];
-        $lat = $rst["Latitude"];
-        $loc = array($long,$lat);
-        $available =$rst["available"];
-        $open = $rst["open"];
-        $close = $rst["close"];
-
-        typeID($businessType,$businessTypeID,$types);
+        //self::typeId();
     }
 
-    public function typeId($businessType,$businessTypeID, $types)
+    public function typeId()
     {
-        $arraySize = sizeof($businessTypeID);
+        $this->arraySize = sizeof($this->businessTypeID);
 
 
-
-        for($x = 0; $x < $arraySize; $x++)
-        {
-            if(!in_array($businessType,$types))
-            {
-                if($businessTypeID[x] == $businessType[x])
-                {
-                    $types[$businessType][$businessTypeID];
+        for ($x = 0; $x < $this->arraySize; $x++) {
+            if (!in_array($this->businessType, $this->types)) {
+                if ($this->businessTypeID[x] == $this->businessType[x]) {
+                    $this->types[$this->businessType][$this->businessTypeID];
                 }
             }
 
         }
 
-        return $types;
+        return $this->types;
     }
 
-    public function findBusiness($types,$businessType,$businessTypeID,$busiName,$id,$loc,$open,$close,$available,$hyg,$ratingValue)
+    public function getBusinesses()
     {
-        $arraySize = sizeof($businessTypeID);
-        for($x = 0; $x < $arraySize; $x++)
-        {
-           // $resArray = $types[$x];
-           $resArray = array(
-                $types[$x]=>array
-                (
-                    "Name",
-                    "ID",
-                    "Location"=>array
-                    (
-                        "Lat",
-                        "Long"
-                    ),
-                    "Type",
-                    "Open",
-                    "Close",
-                    "Available",
-                    "Hygiene",
-                    "Rating"
-                )
 
-            );
+        $businesses = [];
 
-            switch($types[$x]) {
-                case $x:
-                    $resArray[$types[$x]]["Name"][$busiName[x]];
-                    $resArray[$types[$x]]["ID"][$id[x]];
-                    //$resCafCan["resCafCan"]["Name"][$loc[x,x]];
-                    $resArray[$types[$x]]["Type"][$businessType[x]];
-                    $resArray[$types[$x]]["Open"][$open[x]];
-                    $resArray[$types[$x]]["Close"][$close[x]];
-                    $resArray[$types[$x]]["Available"][$available[x]];
-                    $resArray[$types[$x]]["Hygiene"][$hyg[x]];
-                    $resArray[$types[$x]]["Rating"][$ratingValue[x]];
-                break;
+        $result = $this->db->query("SELECT id, BusinessName, Latitude, Longitude, BusinessType, open, close, available, RatingValue FROM food");
+
+        foreach ($result as $key) {
+
+            $businesses[$key['id']] = [
+                "Name" => $key['BusinessName'],
+                "ID" => $key['id'],
+                "Location" => [
+                    "Lat" => $key['Latitude'],
+                    "Long" => $key['Longitude']
+                ],
+                "Type" => $key['BusinessType'],
+                "Open" => $key['open'],
+                "Close" => $key['close'],
+                "Available" => $key['available'],
+                "Rating" => $key['RatingValue']
+            ];
+
+        }
+
+        return $businesses;
+    }
+
+    public function getNearbyBusinesses($userLat, $userLong, $distance = '10')
+    {
+
+        $businesses = [];
+
+        $result = $this->db->query('
+        SELECT
+            id, BusinessName, Latitude, Longitude, BusinessType, open, close, available, RatingValue,
+            (3959 * acos(cos(radians(' . $userLat . ')) * cos(radians(Latitude)) * cos(radians(Longitude) - radians(' . $userLong . ')) + sin(radians(' . $userLat . ')) * sin(radians(Latitude)))) AS distance
+        FROM
+            food
+        HAVING distance < ' . $distance . '
+        ORDER BY distance
+        LIMIT 0 , 20
+        ');
+
+        foreach ($result as $key) {
+
+            $businesses[$key['id']] = [
+                "Name" => $key['BusinessName'],
+                "ID" => $key['id'],
+                "Location" => [
+                    "Lat" => $key['Latitude'],
+                    "Long" => $key['Longitude'],
+                    'DistanceMiles' => $key['distance']
+                ],
+                "Type" => $key['BusinessType'],
+                "Open" => $key['open'],
+                "Close" => $key['close'],
+                "Available" => $key['available'],
+                "Rating" => $key['RatingValue']
+            ];
+
+        }
+
+        return $businesses;
+
+    }
+
+    public function getSingleBusiness($id)
+    {
+
+    }
+
+    public function searchType($searchType)
+    {
+        $arraySize = sizeof($this->resArray);
+        $outArray = array();
+
+        for ($x = 0; $x < $arraySize; $x++) {
+            if (!preg_match($searchType, $this->resArray[$x])) {
+                $this->resArray[$x] = $outArray[$x];
             }
         }
-    }
 
-  
+        return $outArray;
+    }
 } 

@@ -47,6 +47,7 @@
         <testsuite name="APPLICATION_ALL">
             <!-- Here you define all the application tests in order of dependency -->
             <!-- APPLICATION -->
+            <!--<file>.application/food.class.test.php</file>-->
         </testsuite>
     </testsuites>
 </phpunit>

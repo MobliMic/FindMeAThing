@@ -5,7 +5,7 @@ $pageSettings = [
         'header' => [
             'pageName' => 'Food',
             'sass' => ['main' => true],
-            'js' => ['main' => true]
+            'js' => ['main' => true, 'navigate' => true, 'ajax' => true, 'food' => true]
         ],
         'body' => true,
         'footer' => true
@@ -17,6 +17,10 @@ $thisPage = new HC_Page($pageSettings);
 // Render Header
 $thisPage->renderView('header');
 ?>
+
+    <div class="row" id="locationContainer">
+
+    </div>
 
     <div class="row">
         <a href="food/summary.php?name=Super%20Cool%20NomNom%20Place" class="btn btn-block btn-default text-left">

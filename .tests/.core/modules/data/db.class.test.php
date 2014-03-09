@@ -55,9 +55,41 @@
                   PRIMARY KEY (`id`)
                 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;';
 
+            $createFood = 'CREATE TABLE `food` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `FHRSID` int(11) DEFAULT NULL,
+  `LocalAuthorityBusinessID` int(11) DEFAULT NULL,
+  `BusinessName` varchar(150) DEFAULT NULL,
+  `BusinessType` varchar(150) DEFAULT NULL,
+  `BusinessTypeID` int(11) DEFAULT NULL,
+  `AddressLine2` varchar(150) DEFAULT NULL,
+  `AddressLine3` varchar(150) DEFAULT NULL,
+  `PostCode` varchar(10) DEFAULT NULL,
+  `RatingValue` int(11) DEFAULT NULL,
+  `RatingKey` varchar(20) DEFAULT NULL,
+  `RatingDate` date DEFAULT NULL,
+  `LocalAuthorityCode` int(11) DEFAULT NULL,
+  `LocalAuthorityName` varchar(50) DEFAULT NULL,
+  `LocalAuthorityWebSite` varchar(255) DEFAULT NULL,
+  `LocalAuthorityEmailAddress` varchar(255) DEFAULT NULL,
+  `Hygiene` int(11) DEFAULT NULL,
+  `Structural` int(11) DEFAULT NULL,
+  `ConfidenceInManagement` int(11) DEFAULT NULL,
+  `SchemeType` varchar(10) DEFAULT NULL,
+  `Longitude` float DEFAULT NULL,
+  `Latitude` float DEFAULT NULL,
+  `AddressLine1` varchar(150) DEFAULT NULL,
+  `AddressLine4` varchar(150) DEFAULT NULL,
+  `available` int(11) DEFAULT NULL,
+  `open` int(11) DEFAULT NULL,
+  `close` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;';
+
 			$this->assertTrue($this->connection->query($createPermissions), 'Could not create permissions table.');
 			$this->assertTrue($this->connection->query($createUsers), 'Could not create users table.');
 			$this->assertTrue($this->connection->query($createTest), 'Could not create test table.');
+			$this->assertTrue($this->connection->query($createFood), 'Could not create food table.');
 		}
 
 		/**
