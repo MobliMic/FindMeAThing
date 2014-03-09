@@ -63,6 +63,45 @@ class F_Food
         return $businesses;
     }
 
+    public function getNearbyBusinesses($userLat, $userLong, $distance = '10')
+    {
+
+        $businesses = [];
+
+        $result = $this->db->query('
+        SELECT
+            id, BusinessName, Latitude, Longitude, BusinessType, open, close, available, RatingValue,
+            (3959 * acos(cos(radians(' . $userLat . ')) * cos(radians(Latitude)) * cos(radians(Longitude) - radians(' . $userLong . ')) + sin(radians(' . $userLat . ')) * sin(radians(Latitude)))) AS distance
+        FROM
+            food
+        HAVING distance < ' . $distance . '
+        ORDER BY distance
+        LIMIT 0 , 20
+        ');
+
+        foreach ($result as $key) {
+
+            $businesses[$key['id']] = [
+                "Name" => $key['BusinessName'],
+                "ID" => $key['id'],
+                "Location" => [
+                    "Lat" => $key['Latitude'],
+                    "Long" => $key['Longitude'],
+                    'Distance' => $key['distance']
+                ],
+                "Type" => $key['BusinessType'],
+                "Open" => $key['open'],
+                "Close" => $key['close'],
+                "Available" => $key['available'],
+                "Rating" => $key['RatingValue']
+            ];
+
+        }
+
+        return $businesses;
+
+    }
+
     public function getSingleBusiness($id)
     {
 

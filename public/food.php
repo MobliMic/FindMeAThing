@@ -25,14 +25,15 @@ $thisPage->renderView('header');
 
     $business = $food->getBusinesses();
 
-    //$db = new HC_DB();
+    $lat = '50.726';
+    $long = '-1.81373';
+    $distance = '10';
 
-    //$business = $db->query('select id from food');
-
-
+    $near = $food->getNearbyBusinesses($lat, $long, $distance);
 
     echo '<pre>';
-    print_r($business);
+    print_r($near);
+    echo '</pre>';
 
     ?>
 </div>
