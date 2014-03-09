@@ -139,7 +139,7 @@ function updateCompass(bearing) {
         alert(direction);
     }
     bearing = (parseInt(bearing)-parseInt(direction));
-    $('#alpha').text(parseInt()window.orientation.alpha);
+    $('#alpha').text(parseInt(window.orientation.alpha));
     $('#beta').text(parseInt(window.orientation.beta));
     $('#gamma').text(parseInt(window.orientation.gamma));
     $('#direction').text(bearing);
