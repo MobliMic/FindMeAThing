@@ -1,7 +1,7 @@
 /**
  * Created by Michael on 09/03/14.
  */
-
+console.log('food');
 
 function updateFoodList(object) {
 
