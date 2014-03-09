@@ -135,6 +135,9 @@ function updateCompass(bearing) {
         // http://dev.w3.org/geo/api/spec-source-orientation.html#deviceorientation
         direction = 360 - window.orientation.alpha;
     }
+    alert(JSON.stringify(window.orientation));
+    alert(bearing);
+    alert(direction);
     bearing = (parseInt(bearing)-parseInt(direction));
     $('#alpha').text(window.orientation.alpha);
     $('#beta').text(window.orientation.beta);
@@ -155,13 +158,23 @@ function initNav() {
     if (typeof (window.urlVars['latitude']) != 'undefined') {
         if (typeof (window.urlVars['longitude']) != 'undefined') {
             updateCoordinates(function () {
+                alert('Got Coors');
                 var r = window.coordinates;
                 if (typeof (r) != 'undefined') {
                     if (typeof (r.coords) != 'undefined') {
                         initializeNavigator(r.coords.latitude, r.coords.longitude);
+                        alert('Init nav');
                         calcRoute(String(r.coords.latitude) + ', ' + String(r.coords.longitude), String(window.urlVars['latitude']) + ', ' + String(window.urlVars['longitude']));
+                        alert('Calc Route');
                         getOrientation(function(c){
-                             updateCompass(bearing(parseInt(window.coordinates.coords.latitude),parseInt(window.coordinates.coords.longitude), parseInt(window.urlVars['latitude']), parseInt(window.urlVars['longitude'])));
+                            alert('Got orientation');
+                            var bearingstuffs = bearing(
+                                parseInt(window.coordinates.coords.latitude),parseInt(window.coordinates.coords.longitude), parseInt(window.urlVars['latitude']), parseInt(window.urlVars['longitude'])
+                            );
+                            alert('Got bearing' + bearingstuffs)
+                             updateCompass(
+                                 bearingstuffs
+                             );
                         });
                     } else {
                         console.log(r);
