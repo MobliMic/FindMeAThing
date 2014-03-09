@@ -93,7 +93,8 @@ function initNav() {
     window.dir = 0;
     if (typeof (window.urlVars['latitude']) != 'undefined') {
         if (typeof (window.urlVars['longitude']) != 'undefined') {
-            updateCoordinates(function (r) {
+            updateCoordinates(function () {
+                var r = window.coordinates;
                 if (typeof (r) != 'undefined') {
                     if (typeof (r.coords) != 'undefined') {
                         initializeNavigator(r.coords.latitude, r.coords.longitude);
