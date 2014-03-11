@@ -46,8 +46,6 @@ function attachInstructionText(marker, text) {
 }
 
 function calcRoute(start, end) {
-    console.log(start, end);
-
     // First, remove any existing markers from the map.
     for (var i = 0; i < markerArray.length; i++) {
         markerArray[i].setMap(null);
@@ -126,24 +124,31 @@ function _toDeg(rad) {
 }
 function updateCompass(bearing) {
     var direction = 0;
-    if (typeof window.orientation.webkitCompassHeading !== 'undefined') {
-        direction = window.orientation.webkitCompassHeading;
-        if (typeof window.orientation !== 'undefined') {
-            direction += window.orientation;
-        }
+    if (typeof window.orientation.heading !== 'undefined') {
+        direction = parseInt(window.orientation.heading);
     } else {
-        // http://dev.w3.org/geo/api/spec-source-orientation.html#deviceorientation
-        direction = 360 - window.orientation.alpha;
+        if (typeof window.orientation.webkitCompassHeading !== 'undefined') {
+            direction = parseInt(window.orientation.webkitCompassHeading);
+        } else {
+            // http://dev.w3.org/geo/api/spec-source-orientation.html#deviceorientation
+            direction = 360 - parseInt(window.orientation.alpha);
+        }
+
     }
-    bearing = (parseFloat(bearing)-parseFloat(direction));
-    $('#alpha').text(window.orientation.alpha);
-    $('#beta').text(window.orientation.beta);
-    $('#gamma').text(window.orientation.gamma);
+    if(isNaN(bearing)){
+        //alert(bearing);
+    }
+    if(isNaN(direction)){
+        //alert(direction);
+    }
+    bearing = (parseInt(bearing)-parseInt(direction));
+    $('#alpha').text(parseInt(window.orientation.alpha));
+    $('#beta').text(parseInt(window.orientation.beta));
+    $('#gamma').text(parseInt(window.orientation.gamma));
     $('#direction').text(bearing);
     $('#compass').css('-ms-transform','rotate('  + (bearing) + 'deg)');
     $('#compass').css('-webkit-transform','rotate('  + (bearing) + 'deg)');
     $('#compass').css('transform','rotate('  + (bearing) + 'deg)');
-    console.log(direction, bearing);
 }
 
 function initNav() {
@@ -160,9 +165,12 @@ function initNav() {
                     if (typeof (r.coords) != 'undefined') {
                         initializeNavigator(r.coords.latitude, r.coords.longitude);
                         calcRoute(String(r.coords.latitude) + ', ' + String(r.coords.longitude), String(window.urlVars['latitude']) + ', ' + String(window.urlVars['longitude']));
-                        getOrientation(function(c){
-                             updateCompass(bearing(parseFloat(window.coordinates.coords.latitude),parseFloat(window.coordinates.coords.longitude), parseFloat(window.urlVars['latitude']), parseFloat(window.urlVars['longitude'])));
-                        });
+                        //getOrientation(function(c){
+                          //  var bearingstuffs = bearing(
+                            //    parseInt(window.coordinates.coords.latitude),parseInt(window.coordinates.coords.longitude), parseInt(window.urlVars['latitude']), parseInt(window.urlVars['longitude'])
+                            //);
+                            //updateCompass(bearingstuffs);
+                        //});
                     } else {
                         console.log(r);
                         alert('Failed to get coordinates 3');

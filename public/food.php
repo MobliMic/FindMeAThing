@@ -5,7 +5,12 @@ $pageSettings = [
         'header' => [
             'pageName' => 'Food',
             'sass' => ['main' => true],
-            'js' => ['main' => true, 'navigate' => true, 'ajax' => true, 'food' => true]
+            'js' => [
+                'main' => true,
+                'convert' => true,
+                'food' => true,
+                'ajax' => true
+            ]
         ],
         'body' => true,
         'footer' => true
@@ -22,7 +27,7 @@ $thisPage->renderView('header');
 
     </div>
 
-    <div class="row">
+    <!--<div class="row">
         <a href="food/summary.php?name=Super%20Cool%20NomNom%20Place" class="btn btn-block btn-default text-left">
             Restaurant Name
             <br>
@@ -56,7 +61,7 @@ $thisPage->renderView('header');
             <span class="glyphicons star"></span>
             <span class="glyphicons star"></span>
         </a>
-    </div>
+    </div>-->
 
 <?php
 // Render Footer

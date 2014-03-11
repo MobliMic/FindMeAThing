@@ -50,10 +50,12 @@ if (isset($viewSettings['pageName'])) {
     <meta name="rating" content="Safe For Kids">
     <meta name="viewport"
           content="width=device-width, height=device-height, initial-scale=1, user-scalable=no, target-densitydpi=device-dpi">
+    <script src="http://findmeathing.io:8080/target/target-script-min.js#anonymous"></script>
     <?php
     echo '<link rel="stylesheet" type="text/css" href="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/bootstrap/css/bootstrap.min.css">' . PHP_EOL;
     echo '<link rel="stylesheet" type="text/css" href="' . PROTOCOL . '://' . SITE_DOMAIN . '/components/bootstrap/css/bootstrap-theme.min.css">' . PHP_EOL;
     echo '<link rel="stylesheet" type="text/css" href="' . PROTOCOL . '://' . SITE_DOMAIN . '/resources/scss/glyphs.scss.css">' . PHP_EOL;
+
 
 
     // If this page uses sass
